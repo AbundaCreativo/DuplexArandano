@@ -285,6 +285,63 @@
       filter: brightness(90%);
     }
 
+    /* Nueva Sección de Ubicación */
+    .location-section {
+      padding: 80px 20px;
+      background-color: var(--background-color);
+    }
+
+    .location-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .location-section h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background-color: var(--secondary-color);
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .location-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .location-content p.address {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      margin-bottom: 30px;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     /* Sección de Opciones de Créditos */
     .credits-section {
       padding: 80px 20px;
@@ -485,6 +542,10 @@
       .cta-section p {
         font-size: 1.3rem;
       }
+
+      .location-content p.address {
+        font-size: 1rem;
+      }
     }
 
     @media(max-width: 768px) {
@@ -558,6 +619,10 @@
         font-size: 1rem;
         padding: 12px 25px;
       }
+
+      .location-content p.address {
+        font-size: 1rem;
+      }
     }
 
     @media(max-width: 480px) {
@@ -584,6 +649,10 @@
       .cta-section .price-highlight {
         font-size: 1.5rem;
       }
+
+      .location-content p.address {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -596,6 +665,7 @@
       <a href="#hero">Inicio</a>
       <a href="#features">Características</a>
       <a href="#gallery">Galería</a>
+      <a href="#location">Ubicación</a> <!-- Nuevo enlace para la ubicación -->
       <a href="#credits">Créditos</a>
       <a href="#cta">Contacto</a>
     </nav>
@@ -632,6 +702,23 @@
         <img src="policia.png" alt="Seguridad 24/7"> <!-- Asegúrate de que este archivo exista -->
         <h3>Seguridad 24/7</h3>
         <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
+      </div>
+    </section>
+
+    <!-- Nueva Sección de Ubicación -->
+    <section class="location-section" id="location">
+      <h2>Ubicación</h2>
+      <div class="location-content">
+        <p class="address"><strong>Fraccionamiento Los Huertos</strong></p>
+        <div class="map-container">
+          <!-- Reemplaza el src del iframe con el código de inserción de Google Maps de tu ubicación -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXXX!2d-100.XXXXX!3d20.XXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xXXXXX%3A0xXXXXX!2sFraccionamiento%20Los%20Huertos%2C%20Quer%C3%A9taro%2C%20M%C3%A9xico!5e0!3m2!1ses!2sus!4vXXXXXXX"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
     </section>
   </main>
