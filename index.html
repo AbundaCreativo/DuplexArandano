@@ -1,142 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dúplex Arándano | Nísperos Condominio</title>
-  <meta name="description" content="Descubre los dúplex Arándano en Nísperos Condominio. Vive en Querétaro con estilo y seguridad. ¡Agenda tu visita ahora!">
-  <meta name="keywords" content="Dúplex, Arándano, Nísperos Condominio, Querétaro, Vivienda, Seguridad, Roof Garden">
-  <meta name="author" content="Nísperos Condominio">
+  <!-- ... meta etiquetas y enlaces existentes ... -->
 
-  <!-- Meta etiquetas para redes sociales -->
-  <meta property="og:title" content="Dúplex Arándano | Nísperos Condominio">
-  <meta property="og:description" content="Descubre los dúplex Arándano en Nísperos Condominio. Vive en Querétaro con estilo y seguridad. ¡Agenda tu visita ahora!">
-  <meta property="og:image" content="URL_DE_TU_IMAGEN_DESTACADA">
-  <meta property="og:url" content="URL_DE_TU_PAGINA">
-  <meta property="og:type" content="website">
-
-  <!-- Importación de Google Fonts -->
+  <!-- Importación de Google Fonts y estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Añadir aquí estilos adicionales necesarios para el carrusel -->
 
   <style>
     :root {
-      --primary-color: #2E8B57; /* Verde mar */
-      --secondary-color: #FFD700; /* Dorado */
-      --text-color: #333;
-      --background-color: #f5f5f5;
-      --font-family: 'Roboto', sans-serif;
+      /* ... variables CSS existentes ... */
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* ... estilos globales y reset ... */
 
     body {
-      font-family: var(--font-family);
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
+      /* ... estilos existentes ... */
     }
 
     /* Header */
-    header {
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+    /* ... estilos del header existentes ... */
 
-    header img {
-      width: 180px;
-    }
+    /* Dirección en el Header */
+    /* ... estilos existentes ... */
 
     /* Botón CTA */
-    .cta-button {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      display: inline-block;
-      margin-top: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-decoration: none;
-    }
-
-    .cta-button:hover {
-      background-color: #f4c500;
-      transform: translateY(-5px);
-    }
+    /* ... estilos existentes ... */
 
     /* Sección Hero */
-    .hero {
-      background-image: url('IMG_0049_edited.jpeg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      color: #fff;
-      text-align: center;
-    }
-
-    .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-
-    .hero-content {
-      z-index: 2;
-      animation: fadeIn 2s ease-in-out;
-      padding: 0 20px;
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-    }
+    /* ... estilos existentes ... */
 
     /* Animaciones */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    /* ... estilos existentes ... */
 
     /* Sección de Características */
-    .features {
+    /* ... estilos existentes ... */
+
+    /* Sección del Carrusel de Imágenes */
+    .image-carousel {
+      position: relative;
+      max-width: 100%;
+      margin: 80px auto;
+      overflow: hidden;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    /* Estilos para la sección de opciones de créditos */
+    .credits-section {
       padding: 80px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+      background-color: #f9f9f9;
+    }
+
+    .credits-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 50px;
+    }
+
+    .credits-features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .feature-item {
+    .credits-item {
       background-color: #fff;
       padding: 40px 30px;
       border-radius: 15px;
@@ -145,199 +103,118 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .feature-item:hover {
+    .credits-item:hover {
       transform: translateY(-10px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .feature-item img {
+    .credits-item img {
       width: 80px;
       margin-bottom: 25px;
     }
 
-    .feature-item h3 {
+    .credits-item h3 {
       font-size: 1.8rem;
       color: var(--primary-color);
       margin-bottom: 15px;
       font-weight: 700;
     }
 
-    .feature-item p {
+    .credits-item p {
       font-size: 1.1rem;
       color: #666;
     }
 
-    /* Sección de Llamado a la Acción */
-    .cta-section {
-      text-align: center;
-      padding: 80px 20px;
-      background-color: var(--primary-color);
-      color: #fff;
-      position: relative;
-    }
-
-    .cta-section::before {
-      content: '';
-      background-image: url('cta-background.jpg');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.2;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .cta-section h2 {
-      font-size: 3rem;
-      margin-bottom: 30px;
-      font-weight: bold;
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-section p {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-section .cta-button {
-      position: relative;
-      z-index: 2;
-    }
+    /* Botón de WhatsApp */
+    /* ... estilos existentes ... */
 
     /* Footer */
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    /* Botón de WhatsApp */
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp-button img {
-      width: 30px;
-    }
+    /* ... estilos existentes ... */
 
     /* Media Queries para Responsividad */
-    @media(max-width: 768px) {
-      header {
-        padding: 15px;
-      }
-
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-      }
-
-      .features {
-        padding: 60px 20px;
-      }
-
-      .cta-section h2 {
-        font-size: 2.4rem;
-      }
-
-      .cta-section p {
-        font-size: 1.2rem;
-      }
-
-      .cta-button {
-        font-size: 1rem;
-        padding: 12px 25px;
-      }
-    }
+    /* ... estilos existentes ... */
   </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header>
-    <img src="logonisperos.png" alt="Nísperos Condominio Logo">
-  </header>
+  <!-- ... código del header existente ... -->
 
   <!-- Sección Hero -->
-  <section class="hero">
-    <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="hero-content">
-      <h1>Dúplex con Roof Garden en Querétaro</h1>
-      <p>Descubre tu nuevo hogar en Nísperos Condominio</p>
-      <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" class="cta-button">Agenda tu visita</a>
+  <!-- ... código de la sección hero existente ... -->
+
+  <!-- Sección de Características -->
+  <!-- ... código de la sección de características existente ... -->
+
+  <!-- Sección del Carrusel de Imágenes -->
+  <section class="image-carousel">
+    <div class="carousel-images">
+      <img src="interior1.jpg" alt="Interior 1">
+      <img src="interior2.jpg" alt="Interior 2">
+      <img src="interior3.jpg" alt="Interior 3">
+      <!-- Añade más imágenes según sea necesario -->
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" id="prevButton">&#10094;</button>
+      <button class="carousel-button" id="nextButton">&#10095;</button>
     </div>
   </section>
 
-  <!-- Sección de Características -->
-  <main>
-    <section class="features">
-      <article class="feature-item">
-        <img src="cama-matrimonial.png" alt="3 Recámaras Espaciosas">
-        <h3>3 Recámaras Espaciosas</h3>
-        <p>Diseño moderno con acabados de alta calidad, ideal para familias o quienes buscan comodidad.</p>
+  <!-- Sección de Opciones de Créditos -->
+  <section class="credits-section">
+    <h2>Opciones de Créditos Disponibles</h2>
+    <div class="credits-features">
+      <article class="credits-item">
+        <img src="credito_bancario.png" alt="Crédito Bancario">
+        <h3>Crédito Bancario</h3>
+        <p>Financiamiento a través de las principales instituciones bancarias del país con tasas competitivas.</p>
       </article>
-      <article class="feature-item">
-        <img src="luces.png" alt="Roof Garden Privado">
-        <h3>Roof Garden Privado</h3>
-        <p>Disfruta de tu propio espacio al aire libre, perfecto para reuniones o relajarte con vistas espectaculares.</p>
+      <article class="credits-item">
+        <img src="infonavit.png" alt="Crédito Infonavit">
+        <h3>Crédito Infonavit</h3>
+        <p>Utiliza tu crédito Infonavit para adquirir tu nuevo hogar de manera fácil y accesible.</p>
       </article>
-      <article class="feature-item">
-        <img src="policia.png" alt="Seguridad 24/7">
-        <h3>Seguridad 24/7</h3>
-        <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
+      <article class="credits-item">
+        <img src="fovissste.png" alt="Crédito Fovissste">
+        <h3>Crédito Fovissste</h3>
+        <p>Aprovecha los beneficios que Fovissste ofrece para empleados del sector público.</p>
       </article>
-    </section>
-  </main>
-
-  <!-- Sección de Llamado a la Acción -->
-  <section class="cta-section">
-    <h2>¿Listo para conocer tu nuevo hogar?</h2>
-    <p>Agenda una visita y descubre por qué Nísperos Condominio es la mejor opción para ti.</p>
-    <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" class="cta-button">Agenda tu visita</a>
+    </div>
   </section>
 
+  <!-- Sección de Llamado a la Acción -->
+  <!-- ... código de la sección de llamado a la acción existente ... -->
+
   <!-- Botón de WhatsApp -->
-  <div class="whatsapp-button">
-    <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" target="_blank" aria-label="Chatea con nosotros por WhatsApp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-  </div>
+  <!-- ... código del botón de WhatsApp existente ... -->
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Nísperos Condominio. Todos los derechos reservados.</p>
-  </footer>
+  <!-- ... código del footer existente ... -->
+
+  <!-- Scripts necesarios para el carrusel -->
+  <script>
+    const carouselImages = document.querySelector('.carousel-images');
+    const images = document.querySelectorAll('.carousel-images img');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    let counter = 0;
+    const size = images[0].clientWidth;
+
+    nextButton.addEventListener('click', () => {
+      if (counter >= images.length - 1) return;
+      carouselImages.style.transition = 'transform 0.5s ease-in-out';
+      counter++;
+      carouselImages.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    });
+
+    prevButton.addEventListener('click', () => {
+      if (counter <= 0) return;
+      carouselImages.style.transition = 'transform 0.5s ease-in-out';
+      counter--;
+      carouselImages.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    });
+  </script>
 
 </body>
 </html>
