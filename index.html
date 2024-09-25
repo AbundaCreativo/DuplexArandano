@@ -26,27 +26,18 @@
 
     /* Header */
     header {
-      background-color: #2E8B57; /* Verde del logo */
-      padding: 40px 20px;
+      padding: 20px;
       text-align: center;
       color: #fff;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
     }
 
     header img {
-      width: 150px;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+      width: 180px;
     }
 
     /* CTA Button */
@@ -224,10 +215,6 @@
         flex-direction: column;
       }
 
-      header h1 {
-        font-size: 2.5rem;
-      }
-
       .hero h2 {
         font-size: 2.5rem;
       }
@@ -248,15 +235,13 @@
   <!-- Header -->
   <header>
     <img src="logonisperos.png" alt="Nísperos Condominio Logo">
-    <h1>Dúplex Arándano en Nísperos Condominio</h1>
-    <p>Estilo, comodidad y plusvalía en Querétaro</p>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h2>Vive con estilo y disfruta de un roof garden espectacular</h2>
+      <h2>Dúplex con Roof Garden en Querétaro: Descubre tu nuevo hogar</h2>
     </div>
   </section>
 
@@ -282,4 +267,23 @@
   <!-- Call to Action Section -->
   <div class="cta-section">
     <h2>¿Listo para conocer tu nuevo hogar?</h2>
-    <p>Agenda una visita
+    <p>Agenda una visita y descubre por qué Nísperos Condominio es la mejor opción para ti.</p>
+    <button class="cta-button">
+      <a href="#formulario-contacto">¡Agenda tu visita ahora!</a>
+    </button>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <div class="whatsapp-button">
+    <a href="https://wa.me/5214422501632" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Nísperos Condominio. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
