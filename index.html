@@ -8,7 +8,7 @@
 
   <!-- Import Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  
+
   <style>
     * {
       margin: 0;
@@ -18,7 +18,7 @@
 
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f9;
+      background-color: #f5f5f5;
       color: #333;
       line-height: 1.6;
       transition: background-color 0.3s ease;
@@ -39,13 +39,13 @@
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
       font-weight: 700;
     }
 
     header p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       opacity: 0.9;
     }
 
@@ -54,7 +54,7 @@
       background-color: #FFD700; /* Amarillo para CTA */
       color: #333;
       border: none;
-      padding: 15px 25px;
+      padding: 15px 30px;
       font-size: 1.2rem;
       font-weight: bold;
       border-radius: 50px;
@@ -64,11 +64,12 @@
       margin-top: 20px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .cta-button:hover {
       background-color: #f4c500;
-      transform: translateY(-3px);
+      transform: translateY(-5px);
     }
 
     .cta-button a {
@@ -101,19 +102,26 @@
 
     .hero-content {
       z-index: 2;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .hero h2 {
       font-size: 3.5rem;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 15px 25px;
-      border-radius: 8px;
+      border-radius: 10px;
       display: inline-block;
       transition: transform 0.3s ease;
     }
 
     .hero h2:hover {
       transform: scale(1.05);
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     /* Features Section */
@@ -130,7 +138,7 @@
       background-color: #fff;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       flex: 1;
@@ -138,7 +146,7 @@
 
     .features div:hover {
       transform: translateY(-10px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .features div img {
@@ -217,7 +225,7 @@
       }
 
       header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
       .hero h2 {
@@ -239,7 +247,7 @@
 
   <!-- Header -->
   <header>
-    <img src="logonisperos.jpeg" alt="Nísperos Condominio Logo">
+    <img src="logonisperos.png" alt="Nísperos Condominio Logo">
     <h1>Dúplex Arándano en Nísperos Condominio</h1>
     <p>Estilo, comodidad y plusvalía en Querétaro</p>
   </header>
@@ -274,23 +282,4 @@
   <!-- Call to Action Section -->
   <div class="cta-section">
     <h2>¿Listo para conocer tu nuevo hogar?</h2>
-    <p>Agenda una visita y descubre por qué Nísperos Condominio es la mejor opción para ti.</p>
-    <button class="cta-button">
-      <a href="#formulario-contacto">¡Agenda tu visita ahora!</a>
-    </button>
-  </div>
-
-  <!-- WhatsApp Button -->
-  <div class="whatsapp-button">
-    <a href="https://wa.me/5214422501632" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Nísperos Condominio. Todos los derechos reservados.</p>
-  </footer>
-
-</body>
-</html>
+    <p>Agenda una visita
