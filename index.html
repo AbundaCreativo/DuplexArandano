@@ -115,6 +115,37 @@
       color: var(--accent-color);
     }
 
+    /* Nueva Clase para la Dirección en el Header */
+    .header-address {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      color: var(--text-color);
+      margin-left: 20px;
+      white-space: nowrap;
+    }
+
+    .header-address img {
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+    }
+
+    .header-address a {
+      color: var(--text-color);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+      font-weight: 500;
+    }
+
+    header.scrolled .header-address a {
+      color: var(--accent-color);
+    }
+
+    .header-address a:hover {
+      color: var(--primary-color);
+    }
+
     /* Sección Hero */
     .hero {
       background-image: url('IMG_0049_edited.jpeg'); /* Ruta corregida */
@@ -464,28 +495,6 @@
       margin: 0;
     }
 
-    /* Nueva Clase para la Dirección en el Header */
-    .header-address {
-      font-size: 1rem;
-      color: var(--text-color);
-      margin-left: 20px;
-      white-space: nowrap;
-    }
-
-    .header-address a {
-      color: var(--text-color);
-      text-decoration: none;
-      transition: color var(--transition-speed);
-    }
-
-    header.scrolled .header-address a {
-      color: var(--accent-color);
-    }
-
-    .header-address a:hover {
-      color: var(--primary-color);
-    }
-
     /* Media Queries para Responsividad */
     @media(max-width: 1024px) {
       .hero h1 {
@@ -619,6 +628,11 @@
         display: none; /* Opcional: Ocultar la dirección en pantallas muy pequeñas */
       }
     }
+
+    /* Aplicar scroll-margin-top a todas las secciones para compensar el header fijo */
+    section {
+      scroll-margin-top: 80px; /* Ajusta este valor según la altura real de tu encabezado */
+    }
   </style>
 </head>
 <body>
@@ -635,8 +649,9 @@
       <a href="#cta">Contacto</a>
     </nav>
     <div class="header-address">
-      <a href="https://www.google.com/maps/search/?api=1&query=Fraccionamiento+Los+Huertos." target="_blank">
-        Fraccionamiento Los Huertos.
+      <a href="https://www.google.com/maps/search/?api=1&query=Fraccionamiento+Los+Huertos" target="_blank">
+        Fraccionamiento Los Huertos
+        <img src="iconos-ubicación.png" alt="Icono de ubicación"> <!-- Asegúrate de que este archivo exista -->
       </a>
     </div>
     <div class="hamburger" id="hamburger">
@@ -713,49 +728,4 @@
   <section class="cta-section" id="cta">
     <h2>¿Listo para conocer tu nuevo hogar?</h2>
     <p class="price-highlight">Dúplex desde $1,360,000 MXN</p>
-    <p>Agenda una visita y descubre por qué Nísperos Condominio es la mejor opción para ti.</p>
-    <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" class="cta-button">Agenda tu visita</a>
-  </section>
-
-  <!-- Botón de WhatsApp -->
-  <div class="whatsapp-button" aria-label="Chatea con nosotros por WhatsApp">
-    <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Nísperos Condominio. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- JavaScript para Interactividad -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    // Inicializar AOS
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-
-    // Menú Responsivo
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    // Cambiar estilo del header al hacer scroll
-    const header = document.getElementById('header');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
-</body>
-</html>
+    <p>Agenda una visita y descubre por qué Nísperos Cond​⬤
