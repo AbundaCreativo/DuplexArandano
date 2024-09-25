@@ -272,8 +272,9 @@
       box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
-    .feature-item img {
-      width: 80px;
+    .feature-item i {
+      font-size: 3rem;
+      color: var(--primary-color);
       margin-bottom: 25px;
     }
 
@@ -524,6 +525,22 @@
       .header-address i {
         font-size: 1rem;
       }
+
+      .feature-item i {
+        font-size: 2.5rem;
+      }
+
+      .feature-item h3 {
+        font-size: 1.6rem;
+      }
+
+      .credits-section h2 {
+        font-size: 2.2rem;
+      }
+
+      .credits-item img {
+        display: none; /* Ocultar imágenes de créditos si se desea */
+      }
     }
 
     @media(max-width: 768px) {
@@ -601,6 +618,14 @@
       .header-address {
         display: none; /* Opcional: Ocultar la dirección en pantallas pequeñas si no cabe */
       }
+
+      .feature-item i {
+        font-size: 2rem;
+      }
+
+      .feature-item h3 {
+        font-size: 1.4rem;
+      }
     }
 
     @media(max-width: 480px) {
@@ -630,6 +655,14 @@
 
       .header-address {
         display: none; /* Opcional: Ocultar la dirección en pantallas muy pequeñas */
+      }
+
+      .feature-item i {
+        font-size: 1.8rem;
+      }
+
+      .feature-item h3 {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -672,19 +705,39 @@
   <main>
     <section class="features" id="features">
       <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-        <img src="cama-matrimonial.png" alt="3 Recámaras Espaciosas"> <!-- Asegúrate de que este archivo exista -->
+        <i class="fas fa-bed"></i>
         <h3>3 Recámaras Espaciosas</h3>
         <p>Diseño moderno con acabados de alta calidad, ideal para familias o quienes buscan comodidad.</p>
       </div>
       <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-        <img src="luces.png" alt="Roof Garden Privado"> <!-- Asegúrate de que este archivo exista -->
+        <i class="fas fa-seedling"></i>
         <h3>Roof Garden Privado</h3>
         <p>Disfruta de tu propio espacio al aire libre, perfecto para reuniones o relajarte con vistas espectaculares.</p>
       </div>
       <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-        <img src="policia.png" alt="Seguridad 24/7"> <!-- Asegúrate de que este archivo exista -->
+        <i class="fas fa-shield-alt"></i>
         <h3>Seguridad 24/7</h3>
         <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-ruler-combined"></i>
+        <h3>86.55m² de Construcción</h3>
+        <p>Espacios amplios y bien distribuidos para una vida cómoda y funcional.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+        <i class="fas fa-bath"></i>
+        <h3>2 Baños Completos</h3>
+        <p>Baños modernos con acabados de alta calidad para mayor comodidad.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-tree"></i>
+        <h3>Áreas Verdes</h3>
+        <p>Espacios verdes diseñados para tu bienestar y el de tu familia.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
+        <i class="fas fa-users"></i>
+        <h3>Comunidad Familiar</h3>
+        <p>Un entorno amigable y seguro para el desarrollo de tu familia.</p>
       </div>
     </section>
 
