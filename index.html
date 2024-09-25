@@ -12,9 +12,12 @@
   <!-- Meta etiquetas para redes sociales -->
   <meta property="og:title" content="Dúplex Arándano | Nísperos Condominio">
   <meta property="og:description" content="Descubre los dúplex Arándano en Nísperos Condominio. Vive en Querétaro con estilo y seguridad. ¡Agenda tu visita ahora!">
-  <meta property="og:image" content="https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.jpeg"> <!-- Asegúrate de que esta imagen exista -->
+  <meta property="og:image" content="https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.jpeg">
   <meta property="og:url" content="https://abundacreativo.github.io/DuplexArandano/">
   <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="logonisperos.png" type="image/png">
 
   <!-- Importación de Google Fonts y FontAwesome -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -160,6 +163,7 @@
       text-align: center;
       padding: 0 20px;
       box-sizing: border-box;
+      scroll-margin-top: 80px;
     }
 
     .hero-overlay {
@@ -384,10 +388,9 @@
       box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
-    .credits-item img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
+    .credits-item i {
+      font-size: 3rem;
+      color: var(--primary-color);
       margin-bottom: 25px;
     }
 
@@ -411,11 +414,12 @@
       color: var(--accent-color);
       position: relative;
       overflow: hidden;
+      scroll-margin-top: 80px;
     }
 
     .cta-section::before {
       content: '';
-      background-image: url('cta-background.jpg'); /* Ruta corregida */
+      background-image: url('cta-background.jpg');
       background-size: cover;
       background-position: center;
       opacity: 0.2;
@@ -538,8 +542,8 @@
         font-size: 2.2rem;
       }
 
-      .credits-item img {
-        display: none; /* Ocultar imágenes de créditos si se desea */
+      .credits-item i {
+        font-size: 2.5rem;
       }
     }
 
@@ -616,7 +620,7 @@
       }
 
       .header-address {
-        display: none; /* Opcional: Ocultar la dirección en pantallas pequeñas si no cabe */
+        display: none;
       }
 
       .feature-item i {
@@ -625,6 +629,10 @@
 
       .feature-item h3 {
         font-size: 1.4rem;
+      }
+
+      .credits-item i {
+        font-size: 2rem;
       }
     }
 
@@ -654,7 +662,7 @@
       }
 
       .header-address {
-        display: none; /* Opcional: Ocultar la dirección en pantallas muy pequeñas */
+        display: none;
       }
 
       .feature-item i {
@@ -664,6 +672,10 @@
       .feature-item h3 {
         font-size: 1.2rem;
       }
+
+      .credits-item i {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -671,12 +683,11 @@
 
   <!-- Header -->
   <header id="header">
-    <img src="logonisperos.png" alt="Nísperos Condominio Logo" class="logo"> <!-- Asegúrate de que este archivo exista -->
+    <img src="logonisperos.png" alt="Nísperos Condominio Logo" class="logo">
     <nav id="nav-menu">
       <a href="#hero">Inicio</a>
       <a href="#features">Características</a>
       <a href="#gallery">Galería</a>
-      <!-- <a href="#location">Ubicación</a> --> <!-- Enlace eliminado -->
       <a href="#credits">Créditos</a>
       <a href="#cta">Contacto</a>
     </nav>
@@ -705,39 +716,34 @@
   <main>
     <section class="features" id="features">
       <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-bed"></i>
-        <h3>3 Recámaras Espaciosas</h3>
-        <p>Diseño moderno con acabados de alta calidad, ideal para familias o quienes buscan comodidad.</p>
-      </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-seedling"></i>
-        <h3>Roof Garden Privado</h3>
-        <p>Disfruta de tu propio espacio al aire libre, perfecto para reuniones o relajarte con vistas espectaculares.</p>
-      </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-shield-alt"></i>
-        <h3>Seguridad 24/7</h3>
-        <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
-      </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
         <i class="fas fa-ruler-combined"></i>
         <h3>86.55m² de Construcción</h3>
         <p>Espacios amplios y bien distribuidos para una vida cómoda y funcional.</p>
       </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-bed"></i>
+        <h3>3 Recámaras Espaciosas</h3>
+        <p>Diseño moderno con acabados de alta calidad, ideal para familias o quienes buscan comodidad.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
         <i class="fas fa-bath"></i>
         <h3>2 Baños Completos</h3>
         <p>Baños modernos con acabados de alta calidad para mayor comodidad.</p>
       </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Seguridad 24/7</h3>
+        <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
         <i class="fas fa-tree"></i>
         <h3>Áreas Verdes</h3>
         <p>Espacios verdes diseñados para tu bienestar y el de tu familia.</p>
       </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
-        <i class="fas fa-users"></i>
-        <h3>Comunidad Familiar</h3>
-        <p>Un entorno amigable y seguro para el desarrollo de tu familia.</p>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-building"></i>
+        <h3>Área Común</h3>
+        <p>Áreas compartidas para actividades recreativas y sociales de la comunidad.</p>
       </div>
     </section>
 
@@ -745,9 +751,9 @@
     <section class="image-gallery" id="gallery">
       <h2 style="text-align:center; margin-bottom:40px; color: var(--primary-color);" data-aos="fade-up">Galería de Imágenes</h2>
       <div class="gallery-grid">
-        <img src="IMG_0088.webp" alt="Interior 1" data-aos="zoom-in" loading="lazy"> <!-- Ruta corregida -->
-        <img src="IMG_0052.webp" alt="Interior 2" data-aos="zoom-in" data-aos-delay="100" loading="lazy"> <!-- Ruta actualizada -->
-        <img src="IMG_0017.webp" alt="Interior 3" data-aos="zoom-in" data-aos-delay="200" loading="lazy"> <!-- Ruta corregida -->
+        <img src="IMG_0088.webp" alt="Interior 1" data-aos="zoom-in" loading="lazy">
+        <img src="IMG_0052.webp" alt="Interior 2" data-aos="zoom-in" data-aos-delay="100" loading="lazy">
+        <img src="IMG_0017.webp" alt="Interior 3" data-aos="zoom-in" data-aos-delay="200" loading="lazy">
         <!-- Añade más imágenes según sea necesario -->
       </div>
     </section>
@@ -758,17 +764,17 @@
     <h2>Opciones de Créditos Disponibles</h2>
     <div class="credits-features">
       <div class="credits-item" data-aos="fade-right">
-        <img src="bancario.png" alt="Crédito Bancario"> <!-- Asegúrate de que este archivo exista -->
+        <i class="fas fa-university"></i>
         <h3>Crédito Bancario</h3>
         <p>Financiamiento a través de las principales instituciones bancarias del país con tasas competitivas.</p>
       </div>
       <div class="credits-item" data-aos="fade-left" data-aos-delay="100">
-        <img src="eea72901-e59e-4c21-96fa-9dbe56219112.png" alt="Crédito Infonavit"> <!-- Asegúrate de que este archivo exista -->
+        <i class="fas fa-home"></i>
         <h3>Crédito Infonavit</h3>
         <p>Utiliza tu crédito Infonavit para adquirir tu nuevo hogar de manera fácil y accesible.</p>
       </div>
       <div class="credits-item" data-aos="fade-right" data-aos-delay="200">
-        <img src="437b4934-dbbf-48c6-8ba1-ef0695be597c.png" alt="Crédito Fovissste"> <!-- Asegúrate de que este archivo exista -->
+        <i class="fas fa-user-tie"></i>
         <h3>Crédito Fovissste</h3>
         <p>Aprovecha los beneficios que Fovissste ofrece para empleados del sector público.</p>
       </div>
