@@ -6,31 +6,54 @@
   <meta name="description" content="Descubre los dúplex Arándano en Nísperos Condominio. Vive en Querétaro con estilo y seguridad. ¡Agenda tu visita ahora!">
   <title>Dúplex Arándano | Nísperos Condominio</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
       color: #333;
+      line-height: 1.6;
+      transition: background-color 0.3s ease;
     }
 
     header {
       background-color: #2E8B57;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
       color: #fff;
+      position: relative;
+      overflow: hidden;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin: 0;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: slideIn 1s ease-in-out;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin: 5px 0;
+      opacity: 0.9;
+      animation: fadeIn 2s ease-in-out;
     }
 
+    /* Header Animations */
+    @keyframes slideIn {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* CTA Button */
     .cta-button {
       background-color: #FFD700;
       color: #333;
@@ -38,13 +61,18 @@
       padding: 15px 25px;
       font-size: 1.2rem;
       font-weight: bold;
-      border-radius: 5px;
+      border-radius: 50px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .cta-button:hover {
       background-color: #f4c500;
+      transform: translateY(-3px);
     }
 
     .cta-button a {
@@ -52,21 +80,21 @@
       color: inherit;
     }
 
-    /* Updated Hero Section */
+    /* Hero Section */
     .hero {
-      background-image: url('IMG_0049_edited.jpeg'); /* Use the uploaded enhanced image */
+      background-image: url('IMG_0049_edited.jpeg'); /* Hero Image */
       background-size: cover;
       background-position: center;
       height: 600px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #fff;
       position: relative;
+      overflow: hidden;
     }
 
     .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.4);
       position: absolute;
       top: 0;
       left: 0;
@@ -78,71 +106,81 @@
       position: relative;
       z-index: 2;
       text-align: center;
+      color: #fff;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     .hero h2 {
-      font-size: 3rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px 20px;
-      border-radius: 10px;
+      font-size: 3.5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 15px 25px;
+      border-radius: 8px;
       display: inline-block;
+      transition: transform 0.3s ease;
     }
 
-    .container {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+    .hero h2:hover {
+      transform: scale(1.05);
     }
 
     /* Features Section */
     .features {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
-      justify-content: space-around;
-      margin-bottom: 30px;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .features div {
       background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       flex: 1;
-      margin: 10px;
-      transition: transform 0.3s ease;
     }
 
     .features div:hover {
       transform: translateY(-10px);
-    }
-
-    .features div h3 {
-      font-size: 1.5rem;
-      color: #2E8B57;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
 
     .features div img {
-      width: 100px;
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .features div h3 {
+      font-size: 1.8rem;
+      color: #2E8B57;
       margin-bottom: 15px;
     }
 
     .features div p {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      color: #666;
     }
 
     /* Call to Action Section */
     .cta-section {
       text-align: center;
-      margin: 40px 0;
+      padding: 60px 20px;
+      background-color: #f0f0f0;
     }
 
     .cta-section h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 20px;
+      color: #2E8B57;
+      font-weight: bold;
     }
 
     .cta-section p {
       font-size: 1.2rem;
+      margin-bottom: 30px;
     }
 
     footer {
@@ -150,11 +188,11 @@
       color: #fff;
       text-align: center;
       padding: 20px;
+      font-size: 0.9rem;
     }
 
     footer p {
       margin: 0;
-      font-size: 0.9rem;
     }
 
     /* WhatsApp Button */
@@ -177,6 +215,30 @@
     .whatsapp-button img {
       width: 30px;
     }
+
+    /* Media Queries for Responsiveness */
+    @media(max-width: 768px) {
+      .features {
+        flex-direction: column;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+
+      .cta-section h2 {
+        font-size: 2.2rem;
+      }
+
+      .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -196,46 +258,41 @@
   </section>
 
   <!-- Features Section -->
-  <div class="container">
-    <div class="features">
-      <div>
-        <img src="cama-matrimonial.png" alt="3 Recámaras Espaciosas">
-        <h3>3 Recámaras Espaciosas</h3>
-        <p>Diseño moderno con acabados de alta calidad, ideal para familias o quienes buscan comodidad.</p>
-      </div>
-      <div>
-        <img src="luces.png" alt="Roof Garden Privado">
-        <h3>Roof Garden Privado</h3>
-        <p>Disfruta de tu propio espacio al aire libre, perfecto para reuniones o relajarte con vistas espectaculares.</p>
-      </div>
-      <div>
-        <img src="policia.png" alt="Seguridad 24/7">
-        <h3>Seguridad 24/7</h3>
-        <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
-      </div>
+  <div class="features">
+    <div>
+      <img src="cama-matrimonial.png" alt="3 Recámaras Espaciosas">
+      <h3>3 Recámaras Espaciosas</h3>
+      <p>Diseño moderno con acabados de alta calidad, ideal para familias o quienes buscan comodidad.</p>
     </div>
+    <div>
+      <img src="cama-matrimonial.png" alt="Roof Garden Privado">
+      <h3>Roof Garden Privado</h3>
+      <p>Disfruta de tu propio espacio al aire libre, perfecto para reuniones o relajarte con vistas espectaculares.</p>
+    </div>
+    <div>
+      <img src="policia.png" alt="Seguridad 24/7">
+      <h3>Seguridad 24/7</h3>
+      <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
+    </div>
+  </div>
 
-    <!-- Call to Action Section -->
-    <div class="cta-section">
-      <h2>¿Listo para conocer tu nuevo hogar?</h2>
-      <p>Agenda una visita y descubre por qué Nísperos Condominio es la mejor opción para ti.</p>
-      <button class="cta-button">
-        <a href="#formulario-contacto">¡Agenda tu visita ahora!</a>
-      </button>
-    </div>
+  <!-- Call to Action Section -->
+  <div class="cta-section">
+    <h2>¿Listo para conocer tu nuevo hogar?</h2>
+    <p>Agenda una visita y descubre por qué Nísperos Condominio es la mejor opción para ti.</p>
+    <button class="cta-button">
+      <a href="#formulario-contacto">¡Agenda tu visita ahora!</a>
+    </button>
+  </div>
 
-    <!-- WhatsApp Button -->
-    <div class="whatsapp-button">
-      <a href="https://wa.me/5214422501632" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-      </a>
-    </div>
+  <!-- WhatsApp Button -->
+  <div class="whatsapp-button">
+    <a href="https://wa.me/5214422501632" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
   </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Nísperos Condominio. Todos los derechos reservados.</p>
-  </footer>
-
-</body>
-</html>
+ 
