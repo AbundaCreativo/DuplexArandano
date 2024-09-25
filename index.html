@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Meta etiquetas esenciales -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dúplex Arándano | Nísperos Condominio</title>
@@ -9,19 +9,24 @@
   <meta name="keywords" content="Dúplex, Arándano, Nísperos Condominio, Querétaro, Vivienda, Seguridad, Roof Garden">
   <meta name="author" content="Nísperos Condominio">
 
-  <!-- Importación de Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Meta etiquetas para redes sociales -->
+  <meta property="og:title" content="Dúplex Arándano | Nísperos Condominio">
+  <meta property="og:description" content="Descubre los dúplex Arándano en Nísperos Condominio. Vive en Querétaro con estilo y seguridad. ¡Agenda tu visita ahora!">
+  <meta property="og:image" content="URL_DE_TU_IMAGEN_DESTACADA">
+  <meta property="og:url" content="URL_DE_TU_PAGINA">
+  <meta property="og:type" content="website">
 
+  <!-- Importación de Google Fonts y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos CSS -->
   <style>
     :root {
       --primary-color: #2E8B57; /* Verde mar */
       --secondary-color: #FFD700; /* Dorado */
       --text-color: #333;
       --background-color: #f5f5f5;
-      --dark-background: #1a1a1a; /* Fondo oscuro */
       --font-family: 'Roboto', sans-serif;
-      --font-title: 'Montserrat', sans-serif;
     }
 
     * {
@@ -35,12 +40,11 @@
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
-      transition: background-color 0.3s ease;
     }
 
     /* Header */
     header {
-      padding: 15px 20px;
+      padding: 20px;
       position: fixed;
       width: 100%;
       background-color: rgba(255, 255, 255, 0.9);
@@ -50,7 +54,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: background-color 0.3s ease;
+      top: 0;
     }
 
     header img {
@@ -73,7 +77,7 @@
     /* Botón CTA */
     .cta-button {
       background-color: var(--secondary-color);
-      color: var(--dark-background);
+      color: var(--text-color);
       border: none;
       padding: 15px 30px;
       font-size: 1.2rem;
@@ -92,7 +96,6 @@
     .cta-button:hover {
       background-color: #f4c500;
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     /* Sección Hero */
@@ -137,7 +140,7 @@
       left: -20px;
       right: -20px;
       bottom: -20px;
-      background: rgba(0, 0, 0, 0.5); /* Sombra más oscura manteniendo transparencia */
+      background: rgba(0, 0, 0, 0.4); /* Sombra más oscura manteniendo transparencia */
       backdrop-filter: blur(5px);
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
       z-index: -1;
@@ -146,7 +149,7 @@
     .hero h1 {
       font-size: 3.5rem;
       margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .hero h2 {
@@ -195,11 +198,6 @@
     .feature-item img {
       width: 80px;
       margin-bottom: 25px;
-      transition: transform 0.3s ease;
-    }
-
-    .feature-item img:hover {
-      transform: scale(1.1);
     }
 
     .feature-item h3 {
@@ -223,13 +221,13 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Asegura que haya 3 imágenes por fila */
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
 
     .gallery-grid img {
       width: 100%;
-      height: 150px; /* Ajustada para un tamaño más pequeño */
+      height: 200px;
       object-fit: cover;
       border-radius: 10px;
       transition: transform 0.3s ease;
@@ -238,3 +236,303 @@
     .gallery-grid img:hover {
       transform: scale(1.05);
     }
+
+    /* Estilos para la sección de opciones de créditos */
+    .credits-section {
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .credits-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 50px;
+    }
+
+    .credits-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .credits-item {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .credits-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .credits-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 25px;
+    }
+
+    .credits-item h3 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .credits-item p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    /* Sección de Llamado a la Acción */
+    .cta-section {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: var(--primary-color);
+      color: #fff;
+      position: relative;
+    }
+
+    .cta-section::before {
+      content: '';
+      background-image: url('cta-background.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section .price-highlight {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section .cta-button {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Botón de WhatsApp */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+      width: 30px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Media Queries para Responsividad */
+    @media(max-width: 768px) {
+      header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+      }
+
+      .header-address {
+        margin-top: 10px;
+      }
+
+      .hero {
+        padding-top: 140px;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero p.price {
+        font-size: 1.5rem;
+      }
+
+      .features {
+        padding: 60px 20px;
+      }
+
+      .gallery-grid img {
+        height: 150px;
+      }
+
+      .cta-section h2 {
+        font-size: 2.4rem;
+      }
+
+      .cta-section p {
+        font-size: 1.2rem;
+      }
+
+      .cta-section .price-highlight {
+        font-size: 1.8rem;
+      }
+
+      .cta-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="logonisperos.png" alt="Nísperos Condominio Logo">
+    <div class="header-address">
+      <img src="iconos-ubicación.png" alt="Ubicación">
+      <span>Fraccionamiento Los Huertos en Querétaro</span>
+    </div>
+  </header>
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>Dúplex con Roof Garden en Querétaro</h1>
+      <h2>Descubre tu nuevo hogar</h2>
+      <p class="price">Desde $1,360,000 MXN</p>
+      <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" class="cta-button">Agenda tu visita</a>
+    </div>
+  </section>
+
+  <!-- Sección de Características -->
+  <main>
+    <section class="features">
+      <article class="feature-item">
+        <img src="cama-matrimonial.png" alt="3 Recámaras Espaciosas">
+        <h3>3 Recámaras Espaciosas</h3>
+        <p>Diseño moderno con acabados de alta calidad, ideal para familias o quienes buscan comodidad.</p>
+      </article>
+      <article class="feature-item">
+        <img src="luces.png" alt="Roof Garden Privado">
+        <h3>Roof Garden Privado</h3>
+        <p>Disfruta de tu propio espacio al aire libre, perfecto para reuniones o relajarte con vistas espectaculares.</p>
+      </article>
+      <article class="feature-item">
+        <img src="policia.png" alt="Seguridad 24/7">
+        <h3>Seguridad 24/7</h3>
+        <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Sección de Galería de Imágenes -->
+  <section class="image-gallery">
+    <div class="gallery-grid">
+      <img src="interior1.jpg" alt="Interior 1">
+      <img src="interior2.jpg" alt="Interior 2">
+      <img src="interior3.jpg" alt="Interior 3">
+      <!-- Añade más imágenes según sea necesario -->
+    </div>
+  </section>
+
+  <!-- Sección de Opciones de Créditos -->
+  <section class="credits-section">
+    <h2>Opciones de Créditos Disponibles</h2>
+    <div class="credits-features">
+      <article class="credits-item">
+        <img src="bancario.png" alt="Crédito Bancario">
+        <h3>Crédito Bancario</h3>
+        <p>Financiamiento a través de las principales instituciones bancarias del país con tasas competitivas.</p>
+      </article>
+      <article class="credits-item">
+        <img src="eea72901-e59e-4c21-96fa-9dbe56219112.png" alt="Crédito Infonavit">
+        <h3>Crédito Infonavit</h3>
+        <p>Utiliza tu crédito Infonavit para adquirir tu nuevo hogar de manera fácil y accesible.</p>
+      </article>
+      <article class="credits-item">
+        <img src="437b4934-dbbf-48c6-8ba1-ef0695be597c.png" alt="Crédito Fovissste">
+        <h3>Crédito Fovissste</h3>
+        <p>Aprovecha los beneficios que Fovissste ofrece para empleados del sector público.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección de Llamado a la Acción -->
+  <section class="cta-section">
+    <h2>¿Listo para conocer tu nuevo hogar?</h2>
+    <p class="price-highlight">Dúplex desde $1,360,000 MXN</p>
+    <p>Agenda una visita y descubre por qué Nísperos Condominio es la mejor opción para ti.</p>
+    <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" class="cta-button">Agenda tu visita</a>
+  </section>
+
+  <!-- Botón de WhatsApp -->
+  <div class="whatsapp-button">
+    <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" target="_blank" aria-label="Chatea con nosotros por WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Nísperos Condominio. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
