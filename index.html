@@ -12,7 +12,7 @@
   <!-- Meta etiquetas para redes sociales -->
   <meta property="og:title" content="Dúplex Arándano | Nísperos Condominio">
   <meta property="og:description" content="Descubre los dúplex Arándano en Nísperos Condominio, la mejor opción en bienes raíces en Querétaro. Compra de casas y departamentos con roof garden, seguridad 24/7 y áreas verdes. ¡Agenda tu visita ahora!">
-  <meta property="og:image" content="https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.jpeg">
+  <meta property="og:image" content="https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.webp">
   <meta property="og:url" content="https://abundacreativo.github.io/DuplexArandano/">
   <meta property="og:type" content="website">
 
@@ -28,11 +28,11 @@
   <!-- Estilos CSS -->
   <style>
     :root {
-      --primary-color: #2E8B57;
-      --secondary-color: #FFD700;
-      --accent-color: #FFFFFF;
-      --text-color: #333;
-      --background-color: #f5f5f5;
+      --primary-color: #2E8B57; /* Verde mar */
+      --secondary-color: #FFD700; /* Dorado */
+      --accent-color: #FFFFFF; /* Blanco */
+      --text-color: #333333; /* Gris oscuro */
+      --background-color: #f5f5f5; /* Gris claro */
       --font-family: 'Roboto', sans-serif;
       --transition-speed: 0.3s;
       --shadow-color: rgba(0, 0, 0, 0.1);
@@ -381,6 +381,26 @@
       padding: 80px 20px;
       max-width: 1200px;
       margin: 0 auto;
+    }
+
+    .image-gallery h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .image-gallery h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: var(--secondary-color);
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
     }
 
     .gallery-grid {
