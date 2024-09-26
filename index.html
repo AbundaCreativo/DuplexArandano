@@ -186,7 +186,7 @@
       position: relative;
       color: var(--accent-color);
       text-align: center;
-      padding: 80px 20px 20px 20px; /* Agregado padding-top */
+      padding: 80px 20px 40px 20px; /* Aumentado padding-bottom */
       box-sizing: border-box;
       scroll-margin-top: 80px;
     }
@@ -204,6 +204,7 @@
     .hero-content {
       z-index: 2;
       animation: fadeInUp 1s ease forwards;
+      max-width: 800px; /* Limitar ancho para mejor legibilidad */
     }
 
     @keyframes fadeInUp {
@@ -247,7 +248,7 @@
     /* Sticker de Créditos en Hero */
     .credit-sticker {
       position: absolute;
-      top: 20px;
+      bottom: 20px; /* Cambiado de top a bottom */
       right: 20px;
       background-color: rgba(255, 215, 0, 0.9); /* Semi-transparente dorado */
       color: #333;
@@ -674,7 +675,7 @@
       }
 
       .credit-sticker {
-        top: 10px;
+        bottom: 10px; /* Ajustado para pantallas medianas */
         right: 10px;
         padding: 8px 12px;
         font-size: 0.8rem;
@@ -771,7 +772,7 @@
       }
 
       .credit-sticker {
-        top: 8px;
+        bottom: 8px; /* Ajustado para pantallas pequeñas */
         right: 8px;
         padding: 6px 10px;
         font-size: 0.7rem;
@@ -820,7 +821,7 @@
       }
 
       .credit-sticker {
-        top: 5px;
+        bottom: 5px; /* Ajustado para pantallas muy pequeñas */
         right: 5px;
         padding: 4px 8px;
         font-size: 0.6rem;
