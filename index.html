@@ -261,7 +261,7 @@
       z-index: 3;
       transform: rotate(-5deg);
       animation: floatSticker 3s ease-in-out infinite;
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZGRkZGRkIi8+CiAgPHBhdGggZD0iTTAgMEwxMCwxMCAxMCwxMCAwLDIwIEwxMCwyMCAxMCwyMCAwLDAgWiIgZmlsbD0idXJsKCNncmFkaWVudCkiLz4KPC9zdmc+') repeat;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI0QyRjhCNTciLz4KICA8cGF0aCBkPSJNMCwwIEwyMDAsMjAgTDIwMCwyMCAwLDAgWiIgZmlsbD0idXJsKCNncmFkaWVudCkiLz4KPC9zdmc+') repeat;
       background-size: contain;
     }
 
@@ -278,6 +278,75 @@
       }
       100% {
         transform: translateY(0) rotate(-5deg);
+      }
+    }
+
+    /* Botón de Llamado a la Acción Mejorado */
+    .cta-button {
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      color: var(--accent-color);
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed), background 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      animation: pulse 4s infinite;
+    }
+
+    .cta-button i {
+      font-size: 1.2rem;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 20px var(--shadow-color-darker);
+      background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: transform 0.5s ease;
+      transform: rotate(45deg) scale(0);
+      z-index: 0;
+    }
+
+    .cta-button:hover::before {
+      transform: rotate(45deg) scale(1);
+    }
+
+    .cta-button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Animación de Pulso para el Botón */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 12px var(--shadow-color);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px var(--shadow-color-darker);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 12px var(--shadow-color);
       }
     }
 
@@ -516,28 +585,6 @@
       margin-bottom: 20px;
       color: var(--secondary-color);
       font-weight: bold;
-    }
-
-    .cta-section .cta-button {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background-color var(--transition-speed), transform var(--transition-speed);
-      display: inline-block;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 12px var(--shadow-color);
-      text-decoration: none;
-    }
-
-    .cta-section .cta-button:hover {
-      background-color: #f4c500;
-      transform: translateY(-5px);
     }
 
     /* Botón de WhatsApp */
@@ -855,126 +902,4 @@
       <h1>Dúplex con Roof Garden en Querétaro</h1>
       <h2>Descubre tu nuevo hogar</h2>
       <p class="price">Desde $1,360,000 MXN</p>
-      <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" class="cta-button">Agenda tu visita</a>
-    </div>
-  </section>
-
-  <!-- Sección de Características -->
-  <main>
-    <section class="features" id="features">
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-ruler-combined"></i>
-        <h3>86.55m² de Construcción</h3>
-        <p>Espacios amplios y bien distribuidos para una vida cómoda y funcional.</p>
-      </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-bed"></i>
-        <h3>3 Recámaras Espaciosas</h3>
-        <p>Diseño moderno con acabados de alta calidad, ideal para familias o quienes buscan comodidad.</p>
-      </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-bath"></i>
-        <h3>2 Baños Completos</h3>
-        <p>Baños modernos con acabados de alta calidad para mayor comodidad.</p>
-      </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
-        <i class="fas fa-shield-alt"></i>
-        <h3>Seguridad 24/7</h3>
-        <p>Vive con tranquilidad en un condominio cerrado, con vigilancia las 24 horas y control de acceso.</p>
-      </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
-        <i class="fas fa-tree"></i>
-        <h3>Áreas Verdes</h3>
-        <p>Espacios verdes diseñados para tu bienestar y el de tu familia.</p>
-      </div>
-      <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
-        <i class="fas fa-building"></i>
-        <h3>Área Común</h3>
-        <p>Áreas compartidas para actividades recreativas y sociales de la comunidad.</p>
-      </div>
-    </section>
-
-    <!-- Sección de Galería de Imágenes -->
-    <section class="image-gallery" id="gallery">
-      <h2 style="text-align:center; margin-bottom:40px; color: var(--primary-color);" data-aos="fade-up">Galería de Imágenes</h2>
-      <div class="gallery-grid">
-        <img src="IMG_0088.webp" alt="Interior dúplex en Querétaro" data-aos="zoom-in" loading="lazy">
-        <img src="IMG_0052.webp" alt="Sala de estar dúplex en Querétaro" data-aos="zoom-in" data-aos-delay="100" loading="lazy">
-        <img src="IMG_0017.webp" alt="Cocina moderna en dúplex Querétaro" data-aos="zoom-in" data-aos-delay="200" loading="lazy">
-        <!-- Añade más imágenes según sea necesario -->
-      </div>
-    </section>
-  </main>
-
-  <!-- Sección de Opciones de Créditos -->
-  <section class="credits-section" id="credits">
-    <h2>Opciones de Créditos Disponibles</h2>
-    <div class="credits-features">
-      <div class="credits-item" data-aos="fade-right">
-        <i class="fas fa-university"></i>
-        <h3>Crédito Bancario</h3>
-        <p>Financiamiento a través de las principales instituciones bancarias del país con tasas competitivas.</p>
-      </div>
-      <div class="credits-item" data-aos="fade-left" data-aos-delay="100">
-        <i class="fas fa-home"></i>
-        <h3>Crédito Infonavit</h3>
-        <p>Utiliza tu crédito Infonavit para adquirir tu nuevo hogar de manera fácil y accesible.</p>
-      </div>
-      <div class="credits-item" data-aos="fade-right" data-aos-delay="200">
-        <i class="fas fa-user-tie"></i>
-        <h3>Crédito Fovissste</h3>
-        <p>Aprovecha los beneficios que Fovissste ofrece para empleados del sector público.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección de Llamado a la Acción -->
-  <section class="cta-section" id="cta">
-    <h2>¿Listo para conocer tu nuevo hogar?</h2>
-    <p class="price-highlight">Dúplex desde $1,360,000 MXN</p>
-    <p>Agenda una visita y descubre por qué Nísperos Condominio es la mejor opción para ti en Querétaro.</p>
-    <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" class="cta-button">Agenda tu visita</a>
-  </section>
-
-  <!-- Botón de WhatsApp -->
-  <div class="whatsapp-button" aria-label="Chatea con nosotros por WhatsApp">
-    <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20Nísperos%20Condominio.%20¿Podrías%20ayudarme%20con%20los%20detalles?" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Nísperos Condominio. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- JavaScript para Interactividad -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    // Inicializar AOS
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-
-    // Menú Responsivo
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    // Cambiar estilo del header al hacer scroll
-    const header = document.getElementById('header');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
-</body>
-</html>
+      <a href="https://wa.me/5214422501632?text=Hola,%20quiero%20recibir%​⬤
