@@ -245,10 +245,10 @@
       color: var(--secondary-color);
     }
 
-    /* Sticker de Créditos Justo Debajo del Header */
+    /* Sticker de Créditos Justo Arriba del Botón de WhatsApp */
     .credit-sticker {
       position: fixed;
-      top: 80px; /* Altura del header + 20px */
+      bottom: 90px; /* 20px (WhatsApp bottom) + 60px (WhatsApp height) + 10px (buffer) */
       right: 20px;
       background-color: rgba(255, 215, 0, 0.9); /* Semi-transparente dorado */
       color: #333;
@@ -259,7 +259,7 @@
       align-items: center;
       gap: 8px;
       font-size: 0.9rem;
-      z-index: 1001; /* Mayor que el header */
+      z-index: 1002; /* Mayor que el botón de WhatsApp (z-index: 1000) */
       transform: rotate(-5deg);
       animation: floatSticker 3s ease-in-out infinite;
       background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI0QyRjhCNTciLz4KICA8cGF0aCBkPSJNMCwwIEwyMDAsMjAgTDIwMCwyMCAwLDAgWiIgZmlsbD0idXJsKCNncmFkaWVudCkiLz4KPC9zdmc+') repeat;
@@ -675,7 +675,7 @@
       }
 
       .credit-sticker {
-        top: 80px; /* Mantiene la posición fija */
+        bottom: 90px; /* Mantiene la posición fija */
         right: 10px;
         padding: 8px 12px;
         font-size: 0.8rem;
@@ -772,7 +772,7 @@
       }
 
       .credit-sticker {
-        top: 80px; /* Mantiene la posición fija */
+        bottom: 90px; /* Mantiene la posición fija */
         right: 8px;
         padding: 6px 10px;
         font-size: 0.7rem;
@@ -821,7 +821,7 @@
       }
 
       .credit-sticker {
-        top: 80px; /* Mantiene la posición fija */
+        bottom: 90px; /* Mantiene la posición fija */
         right: 5px;
         padding: 4px 8px;
         font-size: 0.6rem;
@@ -892,7 +892,7 @@
     </div>
   </header>
 
-  <!-- Sticker de Créditos Justo Debajo del Header -->
+  <!-- Sticker de Créditos Justo Arriba del Botón de WhatsApp -->
   <div class="credit-sticker">
     <i class="fas fa-check-circle"></i>
     <span>Aceptamos: Infonavit, Fovissste & Bancarios</span>
