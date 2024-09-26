@@ -176,7 +176,7 @@
 
     /* Sección Hero */
     .hero {
-      background-image: url('IMG_0049_edited.jpeg'); /* Ruta corregida */
+      background-image: url('IMG_0049_edited.webp'); /* Ruta actualizada */
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -245,10 +245,10 @@
       color: var(--secondary-color);
     }
 
-    /* Sticker de Créditos en Hero */
+    /* Sticker de Créditos fuera de la Sección Hero */
     .credit-sticker {
-      position: absolute;
-      bottom: 20px; /* Cambiado de top a bottom */
+      position: fixed; /* Cambiado a fixed para estar siempre visible */
+      bottom: 100px; /* Posicionado justo arriba del botón de WhatsApp */
       right: 20px;
       background-color: rgba(255, 215, 0, 0.9); /* Semi-transparente dorado */
       color: #333;
@@ -259,7 +259,7 @@
       align-items: center;
       gap: 8px;
       font-size: 0.9rem;
-      z-index: 1001; /* Aumentado para estar por encima del header */
+      z-index: 1001; /* Aumentado para estar por encima del header y otros elementos */
       transform: rotate(-5deg);
       animation: floatSticker 3s ease-in-out infinite;
       background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI0QyRjhCNTciLz4KICA8cGF0aCBkPSJNMCwwIEwyMDAsMjAgTDIwMCwyMCAwLDAgWiIgZmlsbD0idXJsKCNncmFkaWVudCkiLz4KPC9zdmc+') repeat;
@@ -675,8 +675,8 @@
       }
 
       .credit-sticker {
-        bottom: 10px; /* Ajustado para pantallas medianas */
-        right: 10px;
+        bottom: 100px; /* Ajustado para pantallas medianas */
+        right: 20px;
         padding: 8px 12px;
         font-size: 0.8rem;
       }
@@ -772,8 +772,8 @@
       }
 
       .credit-sticker {
-        bottom: 8px; /* Ajustado para pantallas pequeñas */
-        right: 8px;
+        bottom: 120px; /* Ajustado para pantallas pequeñas */
+        right: 20px;
         padding: 6px 10px;
         font-size: 0.7rem;
       }
@@ -821,8 +821,8 @@
       }
 
       .credit-sticker {
-        bottom: 5px; /* Ajustado para pantallas muy pequeñas */
-        right: 5px;
+        bottom: 110px; /* Ajustado para pantallas muy pequeñas */
+        right: 20px;
         padding: 4px 8px;
         font-size: 0.6rem;
       }
@@ -837,7 +837,7 @@
     "name": "Dúplex Arándano",
     "description": "Dúplex con roof garden en Nísperos Condominio, Querétaro. Cuenta con 3 recámaras, 2 baños completos, seguridad 24/7, áreas verdes y una comunidad familiar.",
     "image": [
-      "https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.jpeg",
+      "https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.webp",
       "https://abundacreativo.github.io/DuplexArandano/IMG_0088.webp",
       "https://abundacreativo.github.io/DuplexArandano/IMG_0052.webp",
       "https://abundacreativo.github.io/DuplexArandano/IMG_0017.webp"
@@ -895,10 +895,6 @@
   <!-- Sección Hero -->
   <section class="hero" id="hero">
     <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="credit-sticker">
-      <i class="fas fa-check-circle"></i>
-      <span>Aceptamos: Infonavit, Fovissste & Bancarios</span>
-    </div>
     <div class="hero-content" data-aos="fade-up">
       <h1>Dúplex con Roof Garden en Querétaro</h1>
       <h2>Descubre tu nuevo hogar</h2>
@@ -987,6 +983,12 @@
       <i class="fas fa-calendar-alt"></i> Agenda tu visita
     </a>
   </section>
+
+  <!-- Sticker de Créditos Justo Arriba del Botón de WhatsApp -->
+  <div class="credit-sticker">
+    <i class="fas fa-check-circle"></i>
+    <span>Aceptamos: Infonavit, Fovissste & Bancarios</span>
+  </div>
 
   <!-- Botón de WhatsApp -->
   <div class="whatsapp-button" aria-label="Chatea con nosotros por WhatsApp">
