@@ -20,7 +20,7 @@
   <link rel="icon" href="logonisperos.png" type="image/png">
 
   <!-- Importación de Google Fonts y FontAwesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <!-- AOS CSS para animaciones -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -67,7 +67,7 @@
       width: 100%;
       background-color: var(--accent-color);
       box-shadow: 0 2px 4px var(--shadow-color);
-      padding: 15px 30px;
+      padding: 10px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -75,21 +75,22 @@
     }
 
     header .logo {
-      width: 150px;
+      width: 140px;
       transition: width 0.3s ease;
     }
 
     /* Navegación */
     nav {
       display: flex;
-      gap: 20px;
+      gap: 25px;
     }
 
     nav a {
-      font-weight: 600;
+      font-weight: 500;
       color: var(--text-color);
       position: relative;
       font-size: 1rem;
+      padding: 8px 0;
     }
 
     nav a::after {
@@ -100,7 +101,7 @@
       background: var(--primary-color);
       transition: width var(--transition-speed);
       position: absolute;
-      bottom: -5px;
+      bottom: 0;
       left: 0;
     }
 
@@ -134,7 +135,7 @@
     }
 
     .hero-overlay {
-      background: rgba(0, 0, 0, 0.4); /* Reducir la opacidad para menos oscuridad */
+      background: rgba(0, 0, 0, 0.4);
       position: absolute;
       top: 0;
       right: 0;
@@ -150,23 +151,25 @@
     }
 
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       margin-bottom: 20px;
       line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
 
     .hero p {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-bottom: 40px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .hero .cta-button {
       background-color: var(--secondary-color);
       color: var(--accent-color);
-      padding: 15px 30px;
+      padding: 14px 28px;
       border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1rem;
+      font-weight: 600;
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -177,6 +180,27 @@
       background-color: #D68910;
     }
 
+    /* Sticker de Créditos Aceptados */
+    .credit-sticker {
+      position: fixed;
+      top: 130px;
+      right: 20px;
+      background-color: var(--secondary-color);
+      color: var(--accent-color);
+      padding: 8px 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px var(--shadow-color-darker);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      z-index: 1001;
+    }
+
+    .credit-sticker i {
+      font-size: 1rem;
+    }
+
     /* Sección Sobre Nosotros */
     .about-section {
       display: flex;
@@ -184,7 +208,7 @@
       padding: 80px 20px;
       max-width: 1200px;
       margin: 0 auto;
-      gap: 40px;
+      gap: 60px;
     }
 
     .about-text {
@@ -192,24 +216,24 @@
     }
 
     .about-text h2 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       color: var(--primary-color);
       margin-bottom: 20px;
     }
 
     .about-text p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #555555;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .about-text .cta-button {
       background-color: var(--primary-color);
       color: var(--accent-color);
-      padding: 12px 25px;
+      padding: 12px 24px;
       border-radius: 50px;
       font-size: 1rem;
-      font-weight: bold;
+      font-weight: 500;
       display: inline-block;
       transition: background-color var(--transition-speed);
     }
@@ -236,7 +260,7 @@
 
     .features-section h2 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       color: var(--primary-color);
       margin-bottom: 60px;
     }
@@ -250,9 +274,9 @@
 
     .feature-card {
       background-color: var(--accent-color);
-      padding: 30px;
+      padding: 25px;
       border-radius: 15px;
-      width: calc(33% - 40px);
+      width: calc(25% - 40px);
       box-shadow: 0 6px 18px var(--shadow-color);
       text-align: center;
       transition: transform var(--transition-speed), box-shadow var(--transition-speed);
@@ -264,19 +288,19 @@
     }
 
     .feature-card i {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 20px;
-    }
-
-    .feature-card h3 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: var(--primary-color);
       margin-bottom: 15px;
     }
 
+    .feature-card h3 {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
     .feature-card p {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #555555;
     }
 
@@ -287,7 +311,7 @@
 
     .gallery-section h2 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       color: var(--primary-color);
       margin-bottom: 60px;
     }
@@ -321,7 +345,7 @@
     }
 
     .testimonials-section h2 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       margin-bottom: 60px;
     }
 
@@ -334,66 +358,53 @@
 
     .testimonial-card {
       background-color: rgba(255, 255, 255, 0.1);
-      padding: 30px;
+      padding: 25px;
       border-radius: 15px;
       width: calc(33% - 40px);
       box-shadow: 0 6px 18px var(--shadow-color);
     }
 
     .testimonial-card p {
-      font-size: 1rem;
+      font-size: 0.95rem;
       margin-bottom: 15px;
+      line-height: 1.5;
     }
 
     .testimonial-card h4 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
     }
 
-    /* Sección CTA Final */
+    /* Sección CTA Final Mejorada */
     .final-cta-section {
       position: relative;
       padding: 80px 20px;
-      background-image: url('pattern.svg');
-      background-size: cover;
-      background-position: center;
+      background-color: #F39C12;
       color: var(--accent-color);
       text-align: center;
     }
 
-    /* Añadir una superposición oscura para mejorar la legibilidad */
-    .final-cta-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .final-cta-content {
-      position: relative;
-      z-index: 2;
-    }
-
     .final-cta-section h2 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin-bottom: 20px;
+      color: #FFFFFF;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .final-cta-section p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin-bottom: 40px;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .final-cta-section .cta-button {
-      background-color: var(--secondary-color);
+      background-color: #1B4F72;
       color: var(--accent-color);
-      padding: 15px 30px;
+      padding: 14px 28px;
       border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1rem;
+      font-weight: 600;
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -401,7 +412,7 @@
     }
 
     .final-cta-section .cta-button:hover {
-      background-color: #D68910;
+      background-color: #154360;
     }
 
     /* Footer */
@@ -409,8 +420,8 @@
       background-color: #333333;
       color: #ffffff;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
+      padding: 20px 20px;
+      font-size: 0.85rem;
     }
 
     /* Media Queries */
@@ -476,11 +487,11 @@
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
       }
 
       .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       .feature-card, .testimonial-card {
@@ -506,6 +517,12 @@
       <i class="fas fa-bars"></i>
     </div>
   </header>
+
+  <!-- Sticker de Créditos Aceptados -->
+  <div class="credit-sticker">
+    <i class="fas fa-check-circle"></i>
+    <span>Aceptamos créditos Infonavit, FOVISSSTE y bancarios</span>
+  </div>
 
   <!-- Sección Hero -->
   <section class="hero" id="home">
@@ -589,17 +606,13 @@
     </div>
   </section>
 
-  <!-- Sección CTA Final -->
+  <!-- Sección CTA Final Mejorada -->
   <section class="final-cta-section" id="contact">
-    <!-- Superposición oscura -->
-    <div class="final-cta-overlay"></div>
-    <div class="final-cta-content">
-      <h2 data-aos="fade-up">¡Haz Realidad Tu Sueño!</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Contáctanos hoy mismo y descubre todo lo que Dúplex Arándano tiene para ofrecerte.</p>
-      <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button" data-aos="fade-up" data-aos-delay="200">
-        <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
-      </a>
-    </div>
+    <h2 data-aos="fade-up">¡Haz Realidad Tu Sueño!</h2>
+    <p data-aos="fade-up" data-aos-delay="100">Contáctanos hoy mismo y descubre todo lo que Dúplex Arándano tiene para ofrecerte.</p>
+    <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button" data-aos="fade-up" data-aos-delay="200">
+      <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+    </a>
   </section>
 
   <!-- Footer -->
