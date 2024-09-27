@@ -210,31 +210,23 @@
       color: var(--secondary-color);
     }
 
-    /* Sticker de Créditos Aceptados Encima del Botón de WhatsApp */
+    /* Sticker de Créditos Aceptados en Diagonal */
     .credit-sticker {
       position: fixed;
-      bottom: 90px; /* 20px (WhatsApp bottom) + 60px (WhatsApp height) + 10px (buffer) */
-      right: 20px;
+      bottom: 100px; /* Ajuste para que quede encima del botón de WhatsApp */
+      right: -50px;
       background-color: rgba(255, 215, 0, 0.9);
       color: #333;
-      padding: 10px 15px;
+      padding: 10px 20px;
       border-radius: 15px;
       box-shadow: 0 4px 8px var(--shadow-color-darker);
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.9rem;
+      font-size: 1rem;
       z-index: 1002;
-      animation: floatSticker 3s ease-in-out infinite;
-    }
-
-    @keyframes floatSticker {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+      transform: rotate(-45deg);
+      transform-origin: bottom right;
     }
 
     .credit-sticker i {
@@ -425,25 +417,44 @@
       font-weight: bold;
     }
 
-    /* Sección de Llamado a la Acción */
+    /* Sección de Llamado a la Acción Mejorada */
     .cta-section {
       text-align: center;
       padding: 80px 20px;
-      background: linear-gradient(135deg, rgba(46, 139, 87, 0.85), rgba(255, 215, 0, 0.85));
+      background-image: url('cta-background.jpg'); /* Reemplaza con el path de tu imagen */
+      background-size: cover;
+      background-position: center;
       color: var(--accent-color);
       position: relative;
       overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(46, 139, 87, 0.85);
+      z-index: 0;
     }
 
     .cta-section h2 {
       font-size: 3rem;
       margin-bottom: 20px;
       font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      position: relative;
+      z-index: 1;
     }
 
     .cta-section p {
       font-size: 1.5rem;
       margin-bottom: 40px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      position: relative;
+      z-index: 1;
     }
 
     .cta-section .price-highlight {
@@ -451,6 +462,15 @@
       margin-bottom: 20px;
       color: var(--secondary-color);
       font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section .cta-button {
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
     }
 
     /* Sección de Contacto Mejorada */
@@ -596,8 +616,8 @@
       }
 
       .credit-sticker {
-        bottom: 90px;
-        right: 20px;
+        bottom: 100px;
+        right: -40px;
         font-size: 0.8rem;
         padding: 8px 12px;
       }
@@ -613,45 +633,7 @@
   </style>
 
   <!-- Structured Data para SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Residence",
-    "name": "Dúplex Arándano",
-    "description": "Dúplex con roof garden en Nísperos Condominio, Querétaro. Cuenta con 3 recámaras, 2 baños completos, seguridad 24/7 y áreas verdes.",
-    "image": [
-      "https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.jpeg",
-      "https://abundacreativo.github.io/DuplexArandano/IMG_0088.webp",
-      "https://abundacreativo.github.io/DuplexArandano/IMG_0052.webp",
-      "https://abundacreativo.github.io/DuplexArandano/IMG_0017.webp"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Fraccionamiento Los Huertos",
-      "addressLocality": "Querétaro",
-      "addressRegion": "Querétaro",
-      "postalCode": "76000",
-      "addressCountry": "MX"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 20.5888,
-      "longitude": -100.3899
-    },
-    "url": "https://abundacreativo.github.io/DuplexArandano/",
-    "telephone": "+5214422501632",
-    "priceRange": "$1,360,000 MXN",
-    "offers": {
-      "@type": "Offer",
-      "url": "https://wa.me/5214422501632?text=Hola,%20estoy%20interesado%20en%20el%20Dúplex%20Arándano.",
-      "price": "1360000",
-      "priceCurrency": "MXN",
-      "availability": "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition"
-    },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Fraccionamiento+Los+Huertos"
-  }
-  </script>
+  <!-- (Mantén el JSON-LD sin cambios) -->
 </head>
 <body>
 
@@ -675,7 +657,7 @@
     </div>
   </header>
 
-  <!-- Sticker de Créditos Aceptados Encima del Botón de WhatsApp -->
+  <!-- Sticker de Créditos Aceptados en Diagonal -->
   <div class="credit-sticker">
     <i class="fas fa-check-circle"></i>
     <span>Aceptamos: Infonavit, FOVISSSTE y bancarios</span>
@@ -756,7 +738,7 @@
     </section>
   </main>
 
-  <!-- Sección de Llamado a la Acción -->
+  <!-- Sección de Llamado a la Acción Mejorada -->
   <section class="cta-section" id="cta">
     <h2>¡No pierdas esta oportunidad!</h2>
     <p class="price-highlight">Dúplex desde $1,360,000 MXN</p>
