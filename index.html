@@ -191,22 +191,21 @@
     /* Sticker de Créditos Aceptados */
     .credit-sticker {
       position: fixed;
-      top: 130px;
-      right: 20px;
+      top: 70px;
+      left: -60px; /* Ajustar para sacar una parte fuera de la pantalla */
       background-color: var(--secondary-color);
       color: var(--accent-color);
-      padding: 8px 12px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      border-radius: 0 8px 8px 0;
       box-shadow: 0 4px 8px var(--shadow-color-darker);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       z-index: 1001;
+      transform: rotate(-90deg); /* Rotar el sticker */
+      transform-origin: top left;
     }
 
     .credit-sticker i {
-      font-size: 1rem;
+      margin-right: 8px;
     }
 
     /* Sección Sobre Nosotros */
@@ -455,6 +454,13 @@
       .testimonial-card {
         width: calc(50% - 40px);
       }
+
+      /* Ajuste del sticker en pantallas medianas */
+      .credit-sticker {
+        top: 80px;
+        left: -50px;
+        font-size: 0.8rem;
+      }
     }
 
     @media(max-width: 768px) {
@@ -508,6 +514,11 @@
 
       .feature-card, .testimonial-card {
         width: 100%;
+      }
+
+      /* Ajuste del sticker en dispositivos móviles */
+      .credit-sticker {
+        display: none; /* Ocultar el sticker en móviles para mejorar la estética */
       }
     }
   </style>
