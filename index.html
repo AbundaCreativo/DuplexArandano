@@ -196,21 +196,22 @@
     /* Sticker de Créditos Aceptados */
     .credit-sticker {
       position: fixed;
-      top: 250px;
-      right: -50px;
+      top: 200px; /* Ajustado para mejor visibilidad */
+      right: -40px; /* Ajustado para que el sticker sea completamente visible */
       background-color: var(--secondary-color);
       color: var(--accent-color);
-      padding: 10px 20px;
+      padding: 15px 25px; /* Aumentado para mejor legibilidad */
       border-radius: 8px 0 0 8px;
-      box-shadow: 0 4px 8px var(--shadow-color-darker);
-      font-size: 0.9rem;
+      box-shadow: 0 4px 12px var(--shadow-color-darker);
+      font-size: 1rem;
       z-index: 1001;
       transform: rotate(90deg);
       transform-origin: top right;
+      white-space: nowrap;
     }
 
     .credit-sticker i {
-      margin-right: 8px;
+      margin-right: 10px;
     }
 
     /* Sección Sobre Nosotros (Oculta del menú) */
@@ -567,7 +568,7 @@
 
     /* Ajuste de scroll para anclas */
     section {
-      scroll-margin-top: 80px; /* Altura del header */
+      scroll-margin-top: 90px; /* Ajustado para la altura del header */
     }
 
     /* Footer */
@@ -605,9 +606,9 @@
 
       /* Ajuste del sticker en pantallas medianas */
       .credit-sticker {
-        top: 220px;
-        right: -40px;
-        font-size: 0.8rem;
+        top: 180px; /* Ajustado para mejor visibilidad en pantallas medianas */
+        right: -30px; /* Ajustado para evitar solapamiento */
+        font-size: 0.9rem;
       }
     }
 
@@ -706,7 +707,7 @@
       <h1>Dúplex Arándano</h1>
       <p>Vive la experiencia de un hogar moderno y seguro en Querétaro.</p>
       <p class="price">Desde $1.36M</p>
-      <a href="#benefits" class="cta-button">
+      <a href="#about" class="cta-button">
         <i class="fas fa-home"></i> Conoce Más
       </a>
     </div>
@@ -728,7 +729,7 @@
   <section class="benefits-section" id="benefits">
     <h2 data-aos="fade-up">Beneficios de Vivir Aquí</h2>
     <div class="benefits-container">
-      <!-- Tarjeta "Espacios Amplios" Actualizada -->
+      <!-- Tarjeta "Espacios Amplios" -->
       <div class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-expand-arrows-alt"></i>
         <h3>Espacios Amplios</h3>
@@ -740,12 +741,13 @@
         <h3>Roof Top</h3>
         <p>Disfruta de un espacio al aire libre en la azotea para reuniones y descanso.</p>
       </div>
+      <!-- Tarjeta "Seguridad 24/7" -->
       <div class="benefit-card" data-aos="zoom-in" data-aos-delay="300">
         <i class="fas fa-shield-alt"></i>
         <h3>Seguridad 24/7</h3>
         <p>Vive con tranquilidad en un entorno seguro para tu familia.</p>
       </div>
-      <!-- Tarjeta "Excelente Ubicación" Actualizada -->
+      <!-- Tarjeta "Excelente Ubicación" -->
       <div class="benefit-card" data-aos="zoom-in" data-aos-delay="400">
         <i class="fas fa-map-marker-alt"></i>
         <h3>Excelente Ubicación</h3>
@@ -797,9 +799,7 @@
     <h2 data-aos="fade-up">Ubicación Estratégica</h2>
     <div class="map-container" data-aos="fade-up" data-aos-delay="100">
       <!-- Mapa actualizado con la nueva ubicación y pin -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.642473280777!2d-100.41652228456193!3d20.64537140607288!2m3!1f0!2f0!3f0!3m2
-
-!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cbf959b3676c1%3A0x10cc9dce35f3b6cc!2sPaseo%20de%20las%20Cerezas%2C%2076147%20San%20Jos%C3%A9%20el%20Alto%2C%20Qro.!5e0!3m2!1ses!2smx!4v1696612423786!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.642473280777!2d-100.41652228456193!3d20.64537140607288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cbf959b3676c1%3A0x10cc9dce35f3b6cc!2sCONDOMINIO%20N%C3%ADsperos!5e0!3m2!1ses!2smx!4v1696612423786!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
@@ -872,6 +872,16 @@
       navMenu.classList.toggle('active');
     });
 
+    // Cerrar el menú al hacer clic en un enlace (en móviles)
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+        }
+      });
+    });
+
     // Asegurar que la página se cargue en la parte superior
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
@@ -912,19 +922,19 @@
 
     // Actualizar indicador de sección activa en el menú
     const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
+    const navMenuLinks = document.querySelectorAll('nav a');
 
     window.addEventListener('scroll', () => {
       let current = '';
 
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 100; /* Ajuste para la altura del header */
         if (pageYOffset >= sectionTop) {
           current = section.getAttribute('id');
         }
       });
 
-      navLinks.forEach(link => {
+      navMenuLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').includes(current)) {
           link.classList.add('active');
