@@ -159,7 +159,15 @@
 
     .hero p {
       font-size: 1.3rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero .price {
+      font-size: 1.5rem;
       margin-bottom: 40px;
+      font-weight: bold;
+      color: var(--secondary-color);
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
@@ -494,6 +502,10 @@
         font-size: 1rem;
       }
 
+      .hero .price {
+        font-size: 1.2rem;
+      }
+
       .feature-card, .testimonial-card {
         width: 100%;
       }
@@ -504,7 +516,9 @@
 
   <!-- Header -->
   <header>
-    <img src="logonisperos.png" alt="Nísperos Condominio Logo" class="logo">
+    <a href="#home">
+      <img src="logonisperos.png" alt="Nísperos Condominio Logo" class="logo">
+    </a>
     <nav id="nav-menu">
       <a href="#home">Inicio</a>
       <a href="#about">Sobre Nosotros</a>
@@ -530,7 +544,8 @@
     <div class="hero-content" data-aos="fade-right">
       <h1>Dúplex Arándano</h1>
       <p>Vive la experiencia de un hogar moderno y seguro en Querétaro.</p>
-      <a href="#contact" class="cta-button">
+      <p class="price">Desde $1.36M</p>
+      <a href="#about" class="cta-button">
         <i class="fas fa-home"></i> Conoce Más
       </a>
     </div>
@@ -636,6 +651,11 @@
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
+
+    // Asegurar que la página se cargue en la parte superior
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
   </script>
 </body>
 </html>
