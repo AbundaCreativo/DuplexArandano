@@ -210,30 +210,38 @@
       color: var(--secondary-color);
     }
 
-    /* Sticker de Créditos Aceptados */
-    .credit-accepted-sticker {
+    /* Sticker de Créditos Aceptados Encima del Botón de WhatsApp */
+    .credit-sticker {
       position: fixed;
-      top: 150px;
-      left: -60px;
+      bottom: 90px; /* 20px (WhatsApp bottom) + 60px (WhatsApp height) + 10px (buffer) */
+      right: 20px;
       background-color: rgba(255, 215, 0, 0.9);
       color: #333;
-      padding: 10px 20px;
-      border-radius: 0 15px 15px 0;
+      padding: 10px 15px;
+      border-radius: 15px;
       box-shadow: 0 4px 8px var(--shadow-color-darker);
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 1rem;
+      font-size: 0.9rem;
       z-index: 1002;
-      transform: rotate(-90deg);
-      transform-origin: top left;
+      animation: floatSticker 3s ease-in-out infinite;
     }
 
-    .credit-accepted-sticker i {
+    @keyframes floatSticker {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .credit-sticker i {
       color: var(--primary-color);
     }
 
-    /* Botón de Llamado a la Acción */
+    /* Botón de Llamado a la Acción Mejorado */
     .cta-button {
       background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
       color: var(--accent-color);
@@ -445,6 +453,52 @@
       font-weight: bold;
     }
 
+    /* Sección de Contacto Mejorada */
+    .contact-section {
+      padding: 80px 20px;
+      background-color: var(--background-color);
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 50px;
+    }
+
+    .contact-section form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .contact-section button {
+      padding: 15px;
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+    }
+
+    .contact-section button:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-5px);
+    }
+
     /* Botón de WhatsApp */
     .whatsapp-button {
       position: fixed;
@@ -541,10 +595,19 @@
         grid-template-columns: 1fr;
       }
 
-      .credit-accepted-sticker {
-        top: 100px;
-        left: -50px;
-        font-size: 0.9rem;
+      .credit-sticker {
+        bottom: 90px;
+        right: 20px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+      }
+
+      .cta-section h2 {
+        font-size: 2.5rem;
+      }
+
+      .contact-section h2 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -600,7 +663,7 @@
       <a href="#features">Características</a>
       <a href="#gallery">Galería</a>
       <a href="#testimonials">Testimonios</a>
-      <a href="#cta">Contacto</a>
+      <a href="#contacto">Contacto</a>
     </nav>
     <div class="header-address">
       <a href="https://www.google.com/maps/search/?api=1&query=Fraccionamiento+Los+Huertos" target="_blank" aria-label="Ver en Google Maps">
@@ -612,8 +675,8 @@
     </div>
   </header>
 
-  <!-- Sticker de Créditos Aceptados -->
-  <div class="credit-accepted-sticker">
+  <!-- Sticker de Créditos Aceptados Encima del Botón de WhatsApp -->
+  <div class="credit-sticker">
     <i class="fas fa-check-circle"></i>
     <span>Aceptamos: Infonavit, FOVISSSTE y bancarios</span>
   </div>
@@ -701,6 +764,18 @@
     <a href="https://wa.me/5214422501632?text=Hola,%20estoy%20interesado%20en%20el%20Dúplex%20Arándano." class="cta-button">
       <i class="fab fa-whatsapp"></i> <span>Contáctanos por WhatsApp</span>
     </a>
+  </section>
+
+  <!-- Sección de Contacto Mejorada -->
+  <section class="contact-section" id="contacto">
+    <h2>Contáctanos</h2>
+    <form action="https://abundacreativo.github.io/DuplexArandano/contacto" method="POST">
+      <input type="text" name="nombre" placeholder="Tu Nombre" required>
+      <input type="email" name="email" placeholder="Tu Email" required>
+      <input type="tel" name="telefono" placeholder="Tu Teléfono" required>
+      <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
   </section>
 
   <!-- Botón de WhatsApp -->
