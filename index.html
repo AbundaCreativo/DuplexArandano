@@ -12,17 +12,16 @@
   <!-- Meta etiquetas para redes sociales -->
   <meta property="og:title" content="Dúplex Arándano | Tu Nuevo Hogar en Nísperos Condominio">
   <meta property="og:description" content="Vive en un hogar moderno y seguro. Descubre el Dúplex Arándano en Nísperos Condominio, Querétaro.">
-  <meta property="og:image" content="IMG_0049_edited.jpeg">
+  <meta property="og:image" content="IMG_0049_edited.webp">
   <meta property="og:url" content="https://tusitio.com/">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" href="logonisperos.png" type="image/png">
+  <link rel="icon" href="logonisperos.png" type="image/png" sizes="32x32">
 
   <!-- Importación de Google Fonts y FontAwesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <!-- AOS CSS para animaciones -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
   <!-- Estilos CSS -->
@@ -113,7 +112,6 @@
       color: var(--primary-color);
     }
 
-    /* Indicador de sección activa */
     nav a.active::after {
       width: 100%;
     }
@@ -186,358 +184,29 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      transition: background-color var(--transition-speed);
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
     }
 
     .hero .cta-button:hover {
       background-color: #D68910;
-    }
-
-    /* Sticker de Créditos Aceptados */
-    .credit-sticker {
-      position: fixed;
-      top: 250px;
-      right: -50px;
-      background-color: var(--secondary-color);
-      color: var(--accent-color);
-      padding: 10px 20px;
-      border-radius: 8px 0 0 8px;
-      box-shadow: 0 4px 8px var(--shadow-color-darker);
-      font-size: 0.9rem;
-      z-index: 1001;
-      transform: rotate(90deg);
-      transform-origin: top right;
-    }
-
-    .credit-sticker i {
-      margin-right: 8px;
-    }
-
-    /* Sección Sobre Nosotros (Oculta del menú) */
-    .about-section {
-      display: flex;
-      align-items: center;
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 60px;
-    }
-
-    .about-text {
-      flex: 1;
-    }
-
-    .about-text h2 {
-      font-size: 2.4rem;
-      color: var(--primary-color);
-      margin-bottom: 20px;
-    }
-
-    .about-text p {
-      font-size: 1rem;
-      color: #555555;
-      margin-bottom: 25px;
-    }
-
-    .about-text .cta-button {
-      background-color: var(--primary-color);
-      color: var(--accent-color);
-      padding: 12px 24px;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 500;
-      display: inline-block;
-      transition: background-color var(--transition-speed);
-    }
-
-    .about-text .cta-button:hover {
-      background-color: #154360;
-    }
-
-    .about-image {
-      flex: 1;
-    }
-
-    .about-image img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 6px 18px var(--shadow-color);
-    }
-
-    /* Sección Beneficios de Vivir Aquí */
-    .benefits-section {
-      padding: 80px 20px;
-      background-color: #fff;
-    }
-
-    .benefits-section h2 {
-      text-align: center;
-      font-size: 2.4rem;
-      color: var(--primary-color);
-      margin-bottom: 60px;
-    }
-
-    .benefits-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .benefit-card {
-      background-color: var(--accent-color);
-      padding: 25px;
-      border-radius: 15px;
-      width: calc(25% - 40px);
-      box-shadow: 0 6px 18px var(--shadow-color);
-      text-align: center;
-      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    }
-
-    .benefit-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 24px var(--shadow-color-darker);
-    }
-
-    .benefit-card i {
-      font-size: 2rem;
-      color: var(--primary-color);
-      margin-bottom: 15px;
-    }
-
-    .benefit-card h3 {
-      font-size: 1.3rem;
-      color: var(--primary-color);
-      margin-bottom: 10px;
-    }
-
-    .benefit-card p {
-      font-size: 0.95rem;
-      color: #555555;
-    }
-
-    /* Sección Galería (Oculta del menú) */
-    .gallery-section {
-      padding: 80px 20px;
-    }
-
-    .gallery-section h2 {
-      text-align: center;
-      font-size: 2.4rem;
-      color: var(--primary-color);
-      margin-bottom: 60px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 6px 18px var(--shadow-color);
-      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    }
-
-    .gallery-grid img:hover {
       transform: scale(1.05);
-      box-shadow: 0 12px 24px var(--shadow-color-darker);
     }
 
-    /* Sección Testimonios (Oculta del menú) */
-    .testimonials-section {
-      padding: 80px 20px;
-      background-color: var(--primary-color);
-      color: var(--accent-color);
-      text-align: center;
-    }
-
-    .testimonials-section h2 {
-      font-size: 2.4rem;
-      margin-bottom: 40px;
-    }
-
-    .testimonials-slider {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-
-    .testimonials-slider .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .testimonial-card {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 25px;
-      border-radius: 15px;
-      min-width: 100%;
-      box-shadow: 0 6px 18px var(--shadow-color);
-      box-sizing: border-box;
-    }
-
-    .testimonial-card p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-      line-height: 1.5;
-    }
-
-    .testimonial-card h4 {
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    /* Controles del Slider */
-    .slider-controls {
-      margin-top: 20px;
-    }
-
-    .slider-controls button {
+    /* Sticker flotante (créditos aceptados) */
+    .floating-sticker {
+      position: fixed;
+      bottom: 100px; /* Ajuste para colocar encima del botón de WhatsApp */
+      right: 25px;
       background-color: var(--secondary-color);
-      border: none;
       color: var(--accent-color);
-      padding: 10px 15px;
-      margin: 0 5px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color var(--transition-speed);
-    }
-
-    .slider-controls button:hover {
-      background-color: #D68910;
-    }
-
-    /* Sección de Mapa */
-    .location-section {
-      padding: 80px 20px;
-      background-color: #f9f9f9;
-    }
-
-    .location-section h2 {
-      text-align: center;
-      font-size: 2.4rem;
-      color: var(--primary-color);
-      margin-bottom: 40px;
-    }
-
-    .map-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      border-radius: 15px;
-      overflow: hidden;
+      padding: 12px 16px;
+      border-radius: 10px;
       box-shadow: 0 6px 18px var(--shadow-color);
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-    }
-
-    /* Sección FAQ */
-    .faq-section {
-      padding: 80px 20px;
-    }
-
-    .faq-section h2 {
+      z-index: 1001;
+      font-size: 0.9rem;
       text-align: center;
-      font-size: 2.4rem;
-      color: var(--primary-color);
-      margin-bottom: 40px;
-    }
-
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      margin-bottom: 20px;
-    }
-
-    .faq-item h3 {
-      font-size: 1.2rem;
-      color: var(--primary-color);
-      cursor: pointer;
-      position: relative;
-      padding-right: 30px;
-    }
-
-    .faq-item h3::after {
-      content: '\f078';
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      position: absolute;
-      right: 0;
-      transition: transform 0.3s;
-    }
-
-    .faq-item.open h3::after {
-      transform: rotate(180deg);
-    }
-
-    .faq-item p {
-      display: none;
-      font-size: 1rem;
-      color: #555555;
-      margin-top: 10px;
-    }
-
-    .faq-item.open p {
-      display: block;
-    }
-
-    /* Sección CTA Final Mejorada */
-    .final-cta-section {
-      position: relative;
-      padding: 80px 20px;
-      background-color: #F39C12;
-      color: var(--accent-color);
-      text-align: center;
-    }
-
-    .final-cta-section h2 {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-      color: #FFFFFF;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .final-cta-section p {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      color: #FFFFFF;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-
-    .final-cta-section .cta-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .final-cta-section .cta-button {
-      background-color: #1B4F72;
-      color: var(--accent-color);
-      padding: 14px 28px;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: background-color var(--transition-speed);
-    }
-
-    .final-cta-section .cta-button:hover {
-      background-color: #154360;
+      width: 250px;
+      animation: bounce 2s infinite;
     }
 
     /* Botón de WhatsApp flotante */
@@ -563,6 +232,18 @@
 
     .whatsapp-float:hover {
       background-color: #128c7e;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
     }
 
     /* Ajuste de scroll para anclas */
@@ -599,14 +280,9 @@
         width: calc(50% - 40px);
       }
 
-      .testimonial-card {
-        width: calc(100% - 40px);
-      }
-
-      /* Ajuste del sticker en pantallas medianas */
-      .credit-sticker {
-        top: 220px;
-        right: -40px;
+      /* Ajuste del sticker flotante en pantallas medianas */
+      .floating-sticker {
+        bottom: 120px; /* Subir el sticker flotante para móviles */
         font-size: 0.8rem;
       }
     }
@@ -664,13 +340,8 @@
         width: 100%;
       }
 
-      .final-cta-section .cta-buttons {
-        flex-direction: column;
-      }
-
-      /* Ocultar el sticker en dispositivos móviles */
-      .credit-sticker {
-        display: none;
+      .floating-sticker {
+        display: none; /* Ocultar sticker en pantallas pequeñas */
       }
     }
   </style>
@@ -693,12 +364,6 @@
     </div>
   </header>
 
-  <!-- Sticker de Créditos Aceptados -->
-  <div class="credit-sticker">
-    <i class="fas fa-check-circle"></i>
-    <span>Aceptamos créditos Infonavit, FOVISSSTE y bancarios</span>
-  </div>
-
   <!-- Sección Hero -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
@@ -712,29 +377,15 @@
     </div>
   </section>
 
-  <!-- Sección Sobre Nosotros (Se mantiene en la página pero no en el menú) -->
-  <section class="about-section" id="about">
-    <div class="about-text" data-aos="fade-up">
-      <h2>Bienvenido a Nísperos Condominio</h2>
-      <p>En Nísperos Condominio, ofrecemos viviendas de alta calidad diseñadas para mejorar tu calidad de vida. Descubre espacios modernos, cómodos y seguros para ti y tu familia.</p>
-      <a href="#contact" class="cta-button">Agenda una Visita</a>
-    </div>
-    <div class="about-image" data-aos="fade-left">
-      <img src="IMG_0088.webp" alt="Dúplex Arándano">
-    </div>
-  </section>
-
-  <!-- Sección Beneficios de Vivir Aquí -->
+  <!-- Sección Beneficios -->
   <section class="benefits-section" id="benefits">
     <h2 data-aos="fade-up">Beneficios de Vivir Aquí</h2>
     <div class="benefits-container">
-      <!-- Tarjeta "Espacios Amplios" Actualizada -->
       <div class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-expand-arrows-alt"></i>
         <h3>Espacios Amplios</h3>
         <p>86.55 m², 3 recámaras confortables y 2 baños modernos para tu comodidad.</p>
       </div>
-      <!-- Tarjeta "Roof Top" -->
       <div class="benefit-card" data-aos="zoom-in" data-aos-delay="200">
         <i class="fas fa-building"></i>
         <h3>Roof Top</h3>
@@ -745,105 +396,18 @@
         <h3>Seguridad 24/7</h3>
         <p>Vive con tranquilidad en un entorno seguro para tu familia.</p>
       </div>
-      <!-- Tarjeta "Excelente Ubicación" Actualizada -->
       <div class="benefit-card" data-aos="zoom-in" data-aos-delay="400">
         <i class="fas fa-map-marker-alt"></i>
         <h3>Excelente Ubicación</h3>
-        <p>Fraccionamiento Los Huertos<br>
-        Av. Paseo de las Moras<br>
-        San José el Alto, Querétaro</p>
+        <p>Fraccionamiento Los Huertos<br>Av. Paseo de las Moras<br>San José el Alto, Querétaro</p>
       </div>
     </div>
   </section>
 
-  <!-- Sección Galería (Se mantiene en la página pero no en el menú) -->
-  <section class="gallery-section" id="gallery">
-    <h2 data-aos="fade-up">Galería de Imágenes</h2>
-    <div class="gallery-grid">
-      <img src="IMG_0052.webp" alt="Sala de estar" data-aos="fade-up" loading="lazy">
-      <img src="IMG_0017.webp" alt="Cocina moderna" data-aos="fade-up" data-aos-delay="100" loading="lazy">
-      <img src="IMG_0088.webp" alt="Recámara principal" data-aos="fade-up" data-aos-delay="200" loading="lazy">
-      <!-- Añade más imágenes si es necesario -->
-    </div>
-  </section>
-
-  <!-- Sección Testimonios (Se mantiene en la página pero no en el menú) -->
-  <section class="testimonials-section" id="testimonials">
-    <h2 data-aos="fade-up">Lo Que Dicen Nuestros Clientes</h2>
-    <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="100">
-      <div class="slides">
-        <div class="testimonial-card">
-          <p>"Nísperos Condominio superó nuestras expectativas. Un lugar perfecto para nuestra familia."</p>
-          <h4>- María y José</h4>
-        </div>
-        <div class="testimonial-card">
-          <p>"La seguridad y la tranquilidad que ofrece este lugar es incomparable. Estamos muy felices aquí."</p>
-          <h4>- Luis Fernández</h4>
-        </div>
-        <div class="testimonial-card">
-          <p>"Un hogar moderno y cómodo. ¡Recomendado al 100%!"</p>
-          <h4>- Ana González</h4>
-        </div>
-      </div>
-    </div>
-    <div class="slider-controls">
-      <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-      <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-    </div>
-  </section>
-
-  <!-- Sección de Mapa -->
-  <section class="location-section" id="location">
-    <h2 data-aos="fade-up">Ubicación Estratégica</h2>
-    <div class="map-container" data-aos="fade-up" data-aos-delay="100">
-      <!-- Mapa actualizado con la nueva ubicación y pin -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.642473280777!2d-100.41652228456193!3d20.64537140607288!2m3!1f0!2f0!3f0!3m2
-
-!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cbf959b3676c1%3A0x10cc9dce35f3b6cc!2sPaseo%20de%20las%20Cerezas%2C%2076147%20San%20Jos%C3%A9%20el%20Alto%2C%20Qro.!5e0!3m2!1ses!2smx!4v1696612423786!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <!-- Sección FAQ -->
-  <section class="faq-section" id="faq">
-    <h2 data-aos="fade-up">Preguntas Frecuentes</h2>
-    <div class="faq-container">
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-        <h3>¿Qué tipos de crédito aceptan?</h3>
-        <p>Aceptamos créditos Infonavit, FOVISSSTE y bancarios.</p>
-      </div>
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-        <h3>¿La seguridad es 24/7?</h3>
-        <p>Sí, contamos con vigilancia y control de acceso las 24 horas.</p>
-      </div>
-      <!-- Nuevas Preguntas Frecuentes -->
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-        <h3>¿Qué es un dúplex?</h3>
-        <p>Un dúplex es una vivienda que se divide en dos niveles dentro de la misma unidad, ofreciendo un diseño funcional que separa áreas sociales y privadas.</p>
-      </div>
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-        <h3>¿Cómo afecta la zona en desarrollo a la plusvalía de mi propiedad?</h3>
-        <p>Al estar ubicado en una zona en crecimiento, la propiedad tiene un alto potencial de incrementar su valor con el tiempo, generando una excelente inversión.</p>
-      </div>
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-        <h3>¿Qué servicios y comercios hay cerca del condominio?</h3>
-        <p>El condominio está cerca de centros comerciales, escuelas, hospitales y vías de acceso, facilitando tu día a día.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección CTA Final Mejorada -->
-  <section class="final-cta-section" id="contact">
-    <h2 data-aos="fade-up">¡Haz Realidad Tu Sueño!</h2>
-    <p data-aos="fade-up" data-aos-delay="100">Contáctanos hoy mismo y descubre todo lo que Dúplex Arándano tiene para ofrecerte.</p>
-    <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
-      <a href="tel:+524422501632" class="cta-button">
-        <i class="fas fa-phone"></i> Llámanos
-      </a>
-      <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-    </div>
-  </section>
+  <!-- Sticker flotante -->
+  <div class="floating-sticker">
+    <p>Aceptamos créditos: Infonavit, FOVISSSTE y Bancario</p>
+  </div>
 
   <!-- Botón de WhatsApp flotante -->
   <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="whatsapp-float" target="_blank">
@@ -856,15 +420,10 @@
   </footer>
 
   <!-- JavaScript para Interactividad -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    // Inicializar AOS
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
 
-    // Menú Responsivo
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
 
@@ -872,65 +431,9 @@
       navMenu.classList.toggle('active');
     });
 
-    // Asegurar que la página se cargue en la parte superior
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     };
-
-    // Slider de Testimonios
-    const slides = document.querySelector('.testimonials-slider .slides');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentIndex = 0;
-
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < slides.children.length - 1) {
-        currentIndex++;
-        updateSlider();
-      }
-    });
-
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-      }
-    });
-
-    function updateSlider() {
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    // FAQ Interactivo
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-      item.querySelector('h3').addEventListener('click', () => {
-        item.classList.toggle('open');
-      });
-    });
-
-    // Actualizar indicador de sección activa en el menú
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
-    });
   </script>
 </body>
 </html>
