@@ -213,7 +213,7 @@
       margin-right: 8px;
     }
 
-    /* Sección Sobre Nosotros */
+    /* Sección Sobre Nosotros (Oculta del menú) */
     .about-section {
       display: flex;
       align-items: center;
@@ -264,27 +264,27 @@
       box-shadow: 0 6px 18px var(--shadow-color);
     }
 
-    /* Sección Características Destacadas */
-    .features-section {
+    /* Sección Beneficios de Vivir Aquí */
+    .benefits-section {
       padding: 80px 20px;
       background-color: #fff;
     }
 
-    .features-section h2 {
+    .benefits-section h2 {
       text-align: center;
       font-size: 2.4rem;
       color: var(--primary-color);
       margin-bottom: 60px;
     }
 
-    .features-container {
+    .benefits-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
     }
 
-    .feature-card {
+    .benefit-card {
       background-color: var(--accent-color);
       padding: 25px;
       border-radius: 15px;
@@ -294,29 +294,29 @@
       transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     }
 
-    .feature-card:hover {
+    .benefit-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 12px 24px var(--shadow-color-darker);
     }
 
-    .feature-card i {
+    .benefit-card i {
       font-size: 2rem;
       color: var(--primary-color);
       margin-bottom: 15px;
     }
 
-    .feature-card h3 {
+    .benefit-card h3 {
       font-size: 1.3rem;
       color: var(--primary-color);
       margin-bottom: 10px;
     }
 
-    .feature-card p {
+    .benefit-card p {
       font-size: 0.95rem;
       color: #555555;
     }
 
-    /* Sección Galería */
+    /* Sección Galería (Oculta del menú) */
     .gallery-section {
       padding: 80px 20px;
     }
@@ -348,7 +348,7 @@
       box-shadow: 0 12px 24px var(--shadow-color-darker);
     }
 
-    /* Sección Testimonios (Oculta del menú pero se mantiene en la página) */
+    /* Sección Testimonios (Oculta del menú) */
     .testimonials-section {
       padding: 80px 20px;
       background-color: var(--primary-color);
@@ -540,6 +540,31 @@
       background-color: #154360;
     }
 
+    /* Botón de WhatsApp flotante */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      z-index: 1000;
+      box-shadow: 0 6px 18px var(--shadow-color);
+      transition: background-color var(--transition-speed);
+    }
+
+    .whatsapp-float i {
+      margin-top: 16px;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #128c7e;
+    }
+
     /* Footer */
     footer {
       background-color: #333333;
@@ -565,7 +590,7 @@
         margin-bottom: 40px;
       }
 
-      .feature-card {
+      .benefit-card {
         width: calc(50% - 40px);
       }
 
@@ -630,7 +655,7 @@
         font-size: 1.2rem;
       }
 
-      .feature-card {
+      .benefit-card {
         width: 100%;
       }
 
@@ -653,10 +678,7 @@
       <img src="logonisperos.png" alt="Nísperos Condominio Logo" class="logo">
     </a>
     <nav id="nav-menu">
-      <a href="#home" class="active">Inicio</a>
-      <a href="#about">Sobre Nosotros</a>
-      <a href="#features">Características</a>
-      <a href="#gallery">Galería</a>
+      <a href="#benefits" class="active">Beneficios</a>
       <a href="#location">Ubicación</a>
       <a href="#faq">Preguntas Frecuentes</a>
       <a href="#contact">Contacto</a>
@@ -679,13 +701,13 @@
       <h1>Dúplex Arándano</h1>
       <p>Vive la experiencia de un hogar moderno y seguro en Querétaro.</p>
       <p class="price">Desde $1.36M</p>
-      <a href="#about" class="cta-button">
+      <a href="#benefits" class="cta-button">
         <i class="fas fa-info-circle"></i> Conoce Más
       </a>
     </div>
   </section>
 
-  <!-- Sección Sobre Nosotros -->
+  <!-- Sección Sobre Nosotros (Se mantiene en la página pero no en el menú) -->
   <section class="about-section" id="about">
     <div class="about-text" data-aos="fade-up">
       <h2>Bienvenido a Nísperos Condominio</h2>
@@ -697,28 +719,28 @@
     </div>
   </section>
 
-  <!-- Sección Características Destacadas -->
-  <section class="features-section" id="features">
-    <h2 data-aos="fade-up">Características Destacadas</h2>
-    <div class="features-container">
+  <!-- Sección Beneficios de Vivir Aquí -->
+  <section class="benefits-section" id="benefits">
+    <h2 data-aos="fade-up">Beneficios de Vivir Aquí</h2>
+    <div class="benefits-container">
       <!-- Tarjeta "Espacios Amplios" Actualizada -->
-      <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-expand-arrows-alt"></i>
         <h3>Espacios Amplios</h3>
         <p>86.55 m², 3 recámaras confortables y 2 baños modernos para tu comodidad.</p>
       </div>
       <!-- Tarjeta "Roof Top" -->
-      <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="benefit-card" data-aos="zoom-in" data-aos-delay="200">
         <i class="fas fa-building"></i>
         <h3>Roof Top</h3>
         <p>Disfruta de un espacio al aire libre en la azotea para reuniones y descanso.</p>
       </div>
-      <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+      <div class="benefit-card" data-aos="zoom-in" data-aos-delay="300">
         <i class="fas fa-shield-alt"></i>
         <h3>Seguridad 24/7</h3>
         <p>Vive con tranquilidad en un entorno seguro para tu familia.</p>
       </div>
-      <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+      <div class="benefit-card" data-aos="zoom-in" data-aos-delay="400">
         <i class="fas fa-map-marker-alt"></i>
         <h3>Excelente Ubicación</h3>
         <p>Querétaro</p>
@@ -726,7 +748,7 @@
     </div>
   </section>
 
-  <!-- Sección Galería -->
+  <!-- Sección Galería (Se mantiene en la página pero no en el menú) -->
   <section class="gallery-section" id="gallery">
     <h2 data-aos="fade-up">Galería de Imágenes</h2>
     <div class="gallery-grid">
@@ -737,7 +759,7 @@
     </div>
   </section>
 
-  <!-- Sección Testimonios (Oculta del menú pero se mantiene en la página) -->
+  <!-- Sección Testimonios (Se mantiene en la página pero no en el menú) -->
   <section class="testimonials-section" id="testimonials">
     <h2 data-aos="fade-up">Lo Que Dicen Nuestros Clientes</h2>
     <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="100">
@@ -766,9 +788,7 @@
   <section class="location-section" id="location">
     <h2 data-aos="fade-up">Ubicación Estratégica</h2>
     <div class="map-container" data-aos="fade-up" data-aos-delay="100">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.560312158864!2d-100.41708218456196!3d20.648465805842777!2m3!1f0!2f0!3f0!3m2
-
-!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cbfa5a02a8e0f%3A0x3e372d32c842da1d!2sN%C3%ADsperos%20Condominio!5e0!3m2!1ses!2smx!4v1696612423786!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.560312158864!2d-100.41708218456196!3d20.648465805842777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cbfa5a02a8e0f%3A0x3e372d32c842da1d!2sN%C3%ADsperos%20Condominio!5e0!3m2!1ses!2smx!4v1696612423786!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
@@ -786,16 +806,16 @@
       </div>
       <!-- Nuevas Preguntas Frecuentes -->
       <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-        <h3>¿Cuál es el costo de mantenimiento mensual?</h3>
-        <p>El costo de mantenimiento es accesible y cubre servicios como seguridad y áreas comunes.</p>
+        <h3>¿Qué es un dúplex?</h3>
+        <p>Un dúplex es una vivienda que se divide en dos niveles dentro de la misma unidad, ofreciendo un diseño funcional que separa áreas sociales y privadas.</p>
       </div>
       <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-        <h3>¿Existen opciones de financiamiento directo?</h3>
-        <p>Sí, ofrecemos opciones de financiamiento directo. Contáctanos para más detalles.</p>
+        <h3>¿Cómo afecta la zona en desarrollo a la plusvalía de mi propiedad?</h3>
+        <p>Al estar ubicado en una zona en crecimiento, la propiedad tiene un alto potencial de incrementar su valor con el tiempo, generando una excelente inversión.</p>
       </div>
       <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-        <h3>¿Hay escuelas y hospitales cercanos?</h3>
-        <p>Sí, estamos ubicados cerca de escuelas, hospitales y otros servicios esenciales.</p>
+        <h3>¿Qué servicios y comercios hay cerca del condominio?</h3>
+        <p>El condominio está cerca de centros comerciales, escuelas, hospitales y vías de acceso, facilitando tu día a día.</p>
       </div>
     </div>
   </section>
@@ -813,6 +833,11 @@
       </a>
     </div>
   </section>
+
+  <!-- Botón de WhatsApp flotante -->
+  <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <!-- Footer -->
   <footer>
