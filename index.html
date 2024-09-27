@@ -264,48 +264,54 @@
       box-shadow: 0 6px 18px var(--shadow-color);
     }
 
-    /* Nueva Sección de Beneficios */
-    .benefits-section {
+    /* Sección Características Destacadas */
+    .features-section {
       padding: 80px 20px;
       background-color: #fff;
     }
 
-    .benefits-section h2 {
+    .features-section h2 {
       text-align: center;
       font-size: 2.4rem;
       color: var(--primary-color);
       margin-bottom: 60px;
     }
 
-    .benefits-container {
+    .features-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
     }
 
-    .benefit-card {
+    .feature-card {
       background-color: var(--accent-color);
       padding: 25px;
       border-radius: 15px;
-      width: calc(33% - 40px);
+      width: calc(25% - 40px);
       box-shadow: 0 6px 18px var(--shadow-color);
       text-align: center;
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     }
 
-    .benefit-card i {
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px var(--shadow-color-darker);
+    }
+
+    .feature-card i {
       font-size: 2rem;
       color: var(--primary-color);
       margin-bottom: 15px;
     }
 
-    .benefit-card h3 {
+    .feature-card h3 {
       font-size: 1.3rem;
       color: var(--primary-color);
       margin-bottom: 10px;
     }
 
-    .benefit-card p {
+    .feature-card p {
       font-size: 0.95rem;
       color: #555555;
     }
@@ -559,7 +565,7 @@
         margin-bottom: 40px;
       }
 
-      .benefit-card {
+      .feature-card {
         width: calc(50% - 40px);
       }
 
@@ -624,7 +630,7 @@
         font-size: 1.2rem;
       }
 
-      .benefit-card {
+      .feature-card {
         width: 100%;
       }
 
@@ -649,7 +655,7 @@
     <nav id="nav-menu">
       <a href="#home" class="active">Inicio</a>
       <a href="#about">Sobre Nosotros</a>
-      <a href="#benefits">Beneficios</a>
+      <a href="#features">Características</a>
       <a href="#gallery">Galería</a>
       <a href="#testimonials">Testimonios</a>
       <a href="#location">Ubicación</a>
@@ -691,24 +697,31 @@
     </div>
   </section>
 
-  <!-- Sección Beneficios -->
-  <section class="benefits-section" id="benefits">
-    <h2 data-aos="fade-up">Beneficios de Vivir Aquí</h2>
-    <div class="benefits-container">
-      <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-swimming-pool"></i>
-        <h3>Áreas Recreativas</h3>
-        <p>Disfruta de piscina, parque infantil y más amenidades para toda la familia.</p>
+  <!-- Sección Características Destacadas -->
+  <section class="features-section" id="features">
+    <h2 data-aos="fade-up">Características Destacadas</h2>
+    <div class="features-container">
+      <!-- Tarjeta "Espacios Amplios" Actualizada -->
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-expand-arrows-alt"></i>
+        <h3>Espacios Amplios</h3>
+        <p>104 m² de construcción, 2 recámaras y 2 baños completos para tu comodidad.</p>
       </div>
-      <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-school"></i>
-        <h3>Cercanía a Escuelas</h3>
-        <p>Acceso a las mejores instituciones educativas de la zona.</p>
+      <!-- Tarjeta "Roof Top" Actualizada -->
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-building"></i>
+        <h3>Roof Top</h3>
+        <p>Disfruta de un espacio al aire libre en la azotea para reuniones y descanso.</p>
       </div>
-      <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-shopping-cart"></i>
-        <h3>Centros Comerciales</h3>
-        <p>A minutos de plazas y tiendas para tu comodidad.</p>
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Seguridad 24/7</h3>
+        <p>Vive con tranquilidad en un entorno seguro para tu familia.</p>
+      </div>
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Excelente Ubicación</h3>
+        <p>Fraccionamiento Los Huertos, Querétaro. Accesibilidad y conveniencia en un solo lugar.</p>
       </div>
     </div>
   </section>
