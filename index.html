@@ -134,7 +134,7 @@
     }
 
     .hero-overlay {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.4); /* Reducir la opacidad para menos oscuridad */
       position: absolute;
       top: 0;
       right: 0;
@@ -352,12 +352,29 @@
 
     /* Sección CTA Final */
     .final-cta-section {
+      position: relative;
       padding: 80px 20px;
       background-image: url('pattern.svg');
       background-size: cover;
       background-position: center;
       color: var(--accent-color);
       text-align: center;
+    }
+
+    /* Añadir una superposición oscura para mejorar la legibilidad */
+    .final-cta-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 2;
     }
 
     .final-cta-section h2 {
@@ -533,6 +550,12 @@
         <h3>Seguridad 24/7</h3>
         <p>Vive con tranquilidad en un entorno seguro para tu familia.</p>
       </div>
+      <!-- Nueva Tarjeta de "Excelente Ubicación" -->
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Excelente Ubicación</h3>
+        <p>Fraccionamiento Los Huertos, Querétaro. Accesibilidad y conveniencia en un solo lugar.</p>
+      </div>
     </div>
   </section>
 
@@ -568,11 +591,15 @@
 
   <!-- Sección CTA Final -->
   <section class="final-cta-section" id="contact">
-    <h2 data-aos="fade-up">¡Haz Realidad Tu Sueño!</h2>
-    <p data-aos="fade-up" data-aos-delay="100">Contáctanos hoy mismo y descubre todo lo que Dúplex Arándano tiene para ofrecerte.</p>
-    <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button" data-aos="fade-up" data-aos-delay="200">
-      <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
-    </a>
+    <!-- Superposición oscura -->
+    <div class="final-cta-overlay"></div>
+    <div class="final-cta-content">
+      <h2 data-aos="fade-up">¡Haz Realidad Tu Sueño!</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Contáctanos hoy mismo y descubre todo lo que Dúplex Arándano tiene para ofrecerte.</p>
+      <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button" data-aos="fade-up" data-aos-delay="200">
+        <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+      </a>
+    </div>
   </section>
 
   <!-- Footer -->
