@@ -4,20 +4,20 @@
   <!-- Meta etiquetas esenciales -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dúplex Arándano | Tu Hogar Ideal en Querétaro</title>
-  <meta name="description" content="Descubre el Dúplex Arándano en Nísperos Condominio. Vive con estilo y comodidad en Querétaro. ¡Agenda tu visita hoy!">
-  <meta name="keywords" content="dúplex Querétaro, Nísperos Condominio, casas en venta, roof garden, seguridad 24/7">
+  <title>Nísperos Condominio | Tu Nuevo Hogar en Querétaro</title>
+  <meta name="description" content="Descubre tu nuevo hogar en Nísperos Condominio. Dúplex con roof garden, amplios espacios y amenidades exclusivas. ¡Agenda tu visita hoy mismo!">
+  <meta name="keywords" content="dúplex, Querétaro, roof garden, Nísperos Condominio, casas en venta, nuevo hogar">
   <meta name="author" content="Nísperos Condominio">
 
   <!-- Meta etiquetas para redes sociales -->
-  <meta property="og:title" content="Dúplex Arándano | Tu Hogar Ideal en Querétaro">
-  <meta property="og:description" content="Descubre el Dúplex Arándano en Nísperos Condominio. Vive con estilo y comodidad en Querétaro. ¡Agenda tu visita hoy!">
-  <meta property="og:image" content="https://tusitio.com/imagen-destacada.jpg">
-  <meta property="og:url" content="https://tusitio.com/duplex-arandano">
+  <meta property="og:title" content="Nísperos Condominio | Tu Nuevo Hogar en Querétaro">
+  <meta property="og:description" content="Descubre tu nuevo hogar en Nísperos Condominio. Dúplex con roof garden, amplios espacios y amenidades exclusivas. ¡Agenda tu visita hoy mismo!">
+  <meta property="og:image" content="IMG_0049_edited.webp">
+  <meta property="og:url" content="https://abundacreativo.github.io/DuplexArandano/">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" href="https://tusitio.com/favicon.png" type="image/png">
+  <link rel="icon" href="logonisperos.png" type="image/png">
 
   <!-- Importación de Google Fonts y FontAwesome -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
@@ -74,20 +74,11 @@
       z-index: 1000;
     }
 
-    header.scrolled {
-      box-shadow: 0 4px 6px var(--shadow-color-darker);
-    }
-
     header .logo {
-      width: 150px;
+      width: 130px;
       transition: width 0.3s ease, box-shadow 0.3s ease;
     }
 
-    header.scrolled .logo {
-      width: 130px;
-    }
-
-    /* Navegación */
     nav {
       display: flex;
       gap: 15px;
@@ -116,29 +107,13 @@
       width: 100%;
     }
 
-    header.scrolled nav a {
-      color: var(--primary-color);
-    }
-
     nav a:hover {
-      color: var(--primary-color);
-    }
-
-    /* Menú Responsivo */
-    .hamburger {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-color);
-    }
-
-    header.scrolled .hamburger {
       color: var(--primary-color);
     }
 
     /* Sección Hero */
     .hero {
-      background-image: url('https://tusitio.com/imagen-hero.jpg');
+      background-image: url('IMG_0049_edited.webp');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -153,7 +128,7 @@
     }
 
     .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       position: absolute;
       top: 0;
       left: 0;
@@ -168,76 +143,28 @@
     }
 
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       line-height: 1.2;
     }
 
     .hero h2 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
       font-weight: 400;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
 
     .hero p.price {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 30px;
       font-weight: bold;
       color: var(--secondary-color);
     }
 
-    /* Botón de Llamado a la Acción */
-    .cta-button {
-      background: linear-gradient(45deg, #ff7e5f, #feb47b);
-      color: var(--accent-color);
-      border: none;
-      padding: 12px 25px;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: transform var(--transition-speed), box-shadow var(--transition-speed), background 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 12px var(--shadow-color);
-      text-decoration: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px var(--shadow-color-darker);
-      background: linear-gradient(45deg, #feb47b, #ff7e5f);
-    }
-
-    .cta-button::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: rgba(255, 255, 255, 0.2);
-      transition: transform 0.5s ease;
-      transform: rotate(45deg) scale(0);
-      z-index: 0;
-    }
-
-    .cta-button:hover::before {
-      transform: rotate(45deg) scale(1);
-    }
-
-    .cta-button span {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-button i {
-      font-size: 1.3rem;
+    .hero .cta-button {
+      font-size: 1.2rem;
     }
 
     /* Sección de Beneficios */
@@ -245,20 +172,23 @@
       padding: 60px 20px;
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       gap: 30px;
     }
 
     .benefit-item {
+      flex: 1 1 calc(33% - 60px);
       background-color: var(--accent-color);
-      padding: 30px 25px;
+      padding: 30px;
       border-radius: 15px;
       box-shadow: 0 6px 18px var(--shadow-color);
       text-align: center;
       transition: transform var(--transition-speed), box-shadow var(--transition-speed);
       position: relative;
       overflow: hidden;
+      min-width: 280px;
     }
 
     .benefit-item:hover {
@@ -345,20 +275,23 @@
     }
 
     .testimonials-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .testimonial-item {
+      flex: 1 1 calc(50% - 60px);
       background-color: var(--accent-color);
       padding: 25px;
       border-radius: 15px;
       box-shadow: 0 6px 18px var(--shadow-color);
       text-align: center;
       position: relative;
+      min-width: 280px;
     }
 
     .testimonial-item p {
@@ -373,17 +306,17 @@
       font-weight: bold;
     }
 
-    /* Sección de Formulario de Contacto */
+    /* Sección de Contacto */
     .contact-section {
       padding: 60px 20px;
-      background-color: var(--primary-color);
-      color: var(--accent-color);
+      background-color: var(--accent-color);
     }
 
     .contact-section h2 {
       text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary-color);
       margin-bottom: 40px;
-      font-size: 2.5rem;
     }
 
     .contact-form {
@@ -394,55 +327,29 @@
     .contact-form form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-      padding: 12px 15px;
-      border: none;
-      border-radius: 5px;
+    .contact-form input, .contact-form textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
       font-size: 1rem;
     }
 
     .contact-form button {
-      padding: 12px 15px;
+      padding: 15px;
+      background-color: var(--primary-color);
+      color: var(--accent-color);
       border: none;
-      border-radius: 5px;
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-      font-size: 1rem;
-      font-weight: bold;
+      border-radius: 10px;
+      font-size: 1.2rem;
       cursor: pointer;
       transition: background var(--transition-speed);
     }
 
     .contact-form button:hover {
-      background-color: #e6c200;
-    }
-
-    /* Mapa de Ubicación */
-    .map-section {
-      padding: 60px 20px;
-    }
-
-    .map-section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--primary-color);
-      font-size: 2rem;
-    }
-
-    .map-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-      border-radius: 10px;
+      background-color: #24694b;
     }
 
     /* Footer */
@@ -458,7 +365,7 @@
       margin: 0;
     }
 
-    /* Media Queries */
+    /* Media Queries para Responsividad */
     @media(max-width: 768px) {
       header {
         padding: 10px 15px;
@@ -489,6 +396,9 @@
 
       .hamburger {
         display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-color);
       }
 
       .hero {
@@ -496,55 +406,28 @@
       }
 
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
 
       .hero h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
 
       .hero p.price {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
 
-      .benefits, .testimonials-container, .gallery-grid {
-        grid-template-columns: 1fr;
+      .benefit-item, .testimonial-item {
+        flex: 1 1 100%;
       }
     }
   </style>
-
-  <!-- Structured Data para SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Nísperos Condominio",
-      "image": "https://tusitio.com/imagen-destacada.jpg",
-      "@id": "https://tusitio.com/duplex-arandano",
-      "url": "https://tusitio.com/duplex-arandano",
-      "telephone": "+524422501632",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Fraccionamiento Los Huertos",
-        "addressLocality": "Querétaro",
-        "postalCode": "76000",
-        "addressCountry": "MX"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 20.5888,
-        "longitude": -100.3899
-      },
-      "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-18:00",
-      "priceRange": "$1,360,000 MXN"
-    }
-  </script>
 </head>
 <body>
 
   <!-- Header -->
-  <header id="header">
-    <img src="https://tusitio.com/logo.png" alt="Nísperos Condominio Logo" class="logo">
+  <header>
+    <img src="logonisperos.png" alt="Nísperos Condominio Logo" class="logo">
     <nav id="nav-menu">
       <a href="#hero">Inicio</a>
       <a href="#benefits">Beneficios</a>
@@ -561,8 +444,8 @@
   <section class="hero" id="hero">
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content" data-aos="fade-up">
-      <h1>Tu Hogar Ideal en Querétaro</h1>
-      <h2>Dúplex Arándano en Nísperos Condominio</h2>
+      <h1>Tu Nuevo Hogar Te Espera en Querétaro</h1>
+      <h2>Dúplex con Roof Garden y Amenidades Exclusivas</h2>
       <p class="price">Desde $1,360,000 MXN</p>
       <a href="#contact" class="cta-button">
         <i class="fas fa-envelope"></i> <span>Agenda tu Visita</span>
@@ -573,79 +456,65 @@
   <!-- Sección de Beneficios -->
   <section class="benefits" id="benefits">
     <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
-      <i class="fas fa-home"></i>
-      <h3>Espacios Amplios</h3>
-      <p>Disfruta de un diseño arquitectónico que maximiza cada metro cuadrado.</p>
-    </div>
-    <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
-      <i class="fas fa-tree"></i>
-      <h3>Roof Garden Privado</h3>
-      <p>Un espacio perfecto para tus reuniones y momentos de relajación.</p>
-    </div>
-    <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
-      <i class="fas fa-shield-alt"></i>
-      <h3>Seguridad 24/7</h3>
-      <p>Vive con tranquilidad en un entorno seguro para ti y tu familia.</p>
-    </div>
-    <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
       <i class="fas fa-map-marker-alt"></i>
       <h3>Ubicación Estratégica</h3>
-      <p>Cerca de los principales puntos de interés de Querétaro.</p>
+      <p>Cerca de escuelas, centros comerciales y vías principales.</p>
+    </div>
+    <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Seguridad 24/7</h3>
+      <p>Acceso controlado y vigilancia para tu tranquilidad.</p>
+    </div>
+    <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-leaf"></i>
+      <h3>Áreas Verdes</h3>
+      <p>Espacios al aire libre para disfrutar en familia.</p>
     </div>
   </section>
 
   <!-- Sección de Galería -->
   <section class="gallery" id="gallery">
-    <h2 data-aos="fade-up">Galería de Imágenes</h2>
+    <h2 data-aos="fade-up">Descubre Tu Nuevo Hogar</h2>
     <div class="gallery-grid">
-      <img src="https://tusitio.com/imagen1.jpg" alt="Imagen 1" data-aos="zoom-in" loading="lazy">
-      <img src="https://tusitio.com/imagen2.jpg" alt="Imagen 2" data-aos="zoom-in" data-aos-delay="100" loading="lazy">
-      <img src="https://tusitio.com/imagen3.jpg" alt="Imagen 3" data-aos="zoom-in" data-aos-delay="200" loading="lazy">
+      <img src="IMG_0088.webp" alt="Interior dúplex en Querétaro" data-aos="zoom-in" loading="lazy">
+      <img src="IMG_0052.webp" alt="Sala de estar dúplex en Querétaro" data-aos="zoom-in" data-aos-delay="100" loading="lazy">
+      <img src="IMG_0017.webp" alt="Cocina moderna en dúplex Querétaro" data-aos="zoom-in" data-aos-delay="200" loading="lazy">
       <!-- Añade más imágenes según sea necesario -->
     </div>
   </section>
 
   <!-- Sección de Testimonios -->
   <section class="testimonials" id="testimonials">
-    <h2 data-aos="fade-up">Lo Que Dicen Nuestros Clientes</h2>
+    <h2 data-aos="fade-up">Nuestros Residentes Opinan</h2>
     <div class="testimonials-container">
       <div class="testimonial-item" data-aos="fade-right">
-        <p>"Comprar en Nísperos Condominio ha sido la mejor decisión. La calidad de vida es excepcional."</p>
-        <h4>- María López</h4>
+        <p>"Nísperos Condominio superó nuestras expectativas. La comunidad es maravillosa y el entorno es perfecto para nuestra familia."</p>
+        <h4>- María y Carlos</h4>
       </div>
       <div class="testimonial-item" data-aos="fade-left" data-aos-delay="100">
-        <p>"El diseño y las amenidades superaron mis expectativas. ¡Totalmente recomendado!"</p>
-        <h4>- Carlos Pérez</h4>
+        <p>"La ubicación es inmejorable. Tenemos todo lo que necesitamos a pocos minutos de casa."</p>
+        <h4>- Andrea López</h4>
       </div>
     </div>
   </section>
 
   <!-- Sección de Contacto -->
   <section class="contact-section" id="contact">
-    <h2>¡Estamos para Ayudarte!</h2>
-    <div class="contact-form" data-aos="fade-up">
-      <form action="https://tusitio.com/enviar-formulario" method="POST">
-        <input type="text" name="nombre" placeholder="Tu Nombre" required>
-        <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-        <input type="tel" name="telefono" placeholder="Tu Teléfono" required>
-        <textarea name="mensaje" placeholder="Tu Mensaje" rows="5" required></textarea>
+    <h2 data-aos="fade-up">¡Agenda Tu Visita Hoy Mismo!</h2>
+    <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Nombre Completo" required>
+        <input type="email" name="email" placeholder="Correo Electrónico" required>
+        <input type="tel" name="phone" placeholder="Teléfono" required>
+        <textarea name="message" rows="4" placeholder="Mensaje (Opcional)"></textarea>
         <button type="submit">Enviar Mensaje</button>
       </form>
-    </div>
-  </section>
-
-  <!-- Sección del Mapa -->
-  <section class="map-section" id="ubicacion">
-    <h2 data-aos="fade-up">Nuestra Ubicación</h2>
-    <div class="map-container" data-aos="fade-up">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18..."></iframe>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Nísperos Condominio. Todos los derechos reservados.</p>
-    <p><a href="https://tusitio.com/privacidad" style="color: #ffffff;">Política de Privacidad</a> | <a href="https://tusitio.com/terminos" style="color: #ffffff;">Términos y Condiciones</a></p>
   </footer>
 
   <!-- JavaScript para Interactividad -->
@@ -664,44 +533,6 @@
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
-
-    // Cambiar estilo del header al hacer scroll
-    const header = document.getElementById('header');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
   </script>
-
-  <!-- Scripts de Terceros (Analítica y Píxeles) -->
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXXXXXX-X');
-  </script>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'XXXXXXXXXXXXXXX');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
-  /></noscript>
 </body>
 </html>
