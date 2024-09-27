@@ -210,10 +210,10 @@
       color: var(--secondary-color);
     }
 
-    /* Sticker de Créditos Aceptados en Diagonal */
+    /* Sticker de Créditos Aceptados Animado */
     .credit-sticker {
       position: fixed;
-      bottom: 100px; /* Ajuste para que quede encima del botón de WhatsApp */
+      bottom: 100px;
       right: -50px;
       background-color: rgba(255, 215, 0, 0.9);
       color: #333;
@@ -226,7 +226,16 @@
       font-size: 1rem;
       z-index: 1002;
       transform: rotate(-45deg);
-      transform-origin: bottom right;
+      animation: floatSticker 5s ease-in-out infinite;
+    }
+
+    @keyframes floatSticker {
+      0%, 100% {
+        transform: rotate(-45deg) translateY(0);
+      }
+      50% {
+        transform: rotate(-45deg) translateY(-10px);
+      }
     }
 
     .credit-sticker i {
@@ -235,7 +244,7 @@
 
     /* Botón de Llamado a la Acción Mejorado */
     .cta-button {
-      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
       color: var(--accent-color);
       border: none;
       padding: 15px 30px;
@@ -256,7 +265,7 @@
     .cta-button:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px var(--shadow-color-darker);
-      background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+      background: linear-gradient(45deg, #feb47b, #ff7e5f);
     }
 
     .cta-button::before {
@@ -420,10 +429,8 @@
     /* Sección de Llamado a la Acción Mejorada */
     .cta-section {
       text-align: center;
-      padding: 80px 20px;
-      background-image: url('cta-background.jpg'); /* Reemplaza con el path de tu imagen */
-      background-size: cover;
-      background-position: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
       color: var(--accent-color);
       position: relative;
       overflow: hidden;
@@ -433,11 +440,12 @@
       content: '';
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: -50%;
+      width: 200%;
       height: 100%;
-      background-color: rgba(46, 139, 87, 0.85);
-      z-index: 0;
+      background-image: url('pattern.png'); /* Añade un patrón o imagen gráfica */
+      opacity: 0.1;
+      transform: rotate(45deg);
     }
 
     .cta-section h2 {
@@ -458,9 +466,9 @@
     }
 
     .cta-section .price-highlight {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: var(--secondary-color);
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #fff;
       font-weight: bold;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
       position: relative;
@@ -471,52 +479,6 @@
       margin-top: 20px;
       position: relative;
       z-index: 1;
-    }
-
-    /* Sección de Contacto Mejorada */
-    .contact-section {
-      padding: 80px 20px;
-      background-color: var(--background-color);
-      text-align: center;
-    }
-
-    .contact-section h2 {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 50px;
-    }
-
-    .contact-section form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .contact-section input,
-    .contact-section textarea {
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 1rem;
-      width: 100%;
-    }
-
-    .contact-section button {
-      padding: 15px;
-      background-color: var(--primary-color);
-      color: var(--accent-color);
-      border: none;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background-color var(--transition-speed), transform var(--transition-speed);
-    }
-
-    .contact-section button:hover {
-      background-color: var(--secondary-color);
-      transform: translateY(-5px);
     }
 
     /* Botón de WhatsApp */
@@ -625,10 +587,6 @@
       .cta-section h2 {
         font-size: 2.5rem;
       }
-
-      .contact-section h2 {
-        font-size: 2rem;
-      }
     }
   </style>
 
@@ -645,7 +603,7 @@
       <a href="#features">Características</a>
       <a href="#gallery">Galería</a>
       <a href="#testimonials">Testimonios</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#cta">Contacto</a>
     </nav>
     <div class="header-address">
       <a href="https://www.google.com/maps/search/?api=1&query=Fraccionamiento+Los+Huertos" target="_blank" aria-label="Ver en Google Maps">
@@ -657,7 +615,7 @@
     </div>
   </header>
 
-  <!-- Sticker de Créditos Aceptados en Diagonal -->
+  <!-- Sticker de Créditos Aceptados Animado -->
   <div class="credit-sticker">
     <i class="fas fa-check-circle"></i>
     <span>Aceptamos: Infonavit, FOVISSSTE y bancarios</span>
@@ -746,18 +704,6 @@
     <a href="https://wa.me/5214422501632?text=Hola,%20estoy%20interesado%20en%20el%20Dúplex%20Arándano." class="cta-button">
       <i class="fab fa-whatsapp"></i> <span>Contáctanos por WhatsApp</span>
     </a>
-  </section>
-
-  <!-- Sección de Contacto Mejorada -->
-  <section class="contact-section" id="contacto">
-    <h2>Contáctanos</h2>
-    <form action="https://abundacreativo.github.io/DuplexArandano/contacto" method="POST">
-      <input type="text" name="nombre" placeholder="Tu Nombre" required>
-      <input type="email" name="email" placeholder="Tu Email" required>
-      <input type="tel" name="telefono" placeholder="Tu Teléfono" required>
-      <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
   </section>
 
   <!-- Botón de WhatsApp -->
