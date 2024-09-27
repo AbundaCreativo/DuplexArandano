@@ -20,7 +20,7 @@
   <link rel="icon" href="logonisperos.png" type="image/png">
 
   <!-- Importación de Google Fonts y FontAwesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <!-- AOS CSS para animaciones -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -34,7 +34,7 @@
       --accent-color: #FFFFFF;
       --text-color: #333333;
       --background-color: #f5f5f5;
-      --font-family: 'Roboto', sans-serif;
+      --font-family: 'Montserrat', sans-serif;
       --transition-speed: 0.3s;
       --shadow-color: rgba(0, 0, 0, 0.1);
       --shadow-color-darker: rgba(0, 0, 0, 0.2);
@@ -67,7 +67,7 @@
       width: 100%;
       background-color: var(--accent-color);
       box-shadow: 0 2px 4px var(--shadow-color);
-      padding: 15px 30px;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -79,24 +79,25 @@
     }
 
     header .logo {
-      width: 150px;
+      width: 130px;
       transition: width 0.3s ease, box-shadow 0.3s ease;
     }
 
     header.scrolled .logo {
-      width: 120px;
+      width: 110px;
     }
 
     /* Navegación */
     nav {
       display: flex;
-      gap: 20px;
+      gap: 15px;
     }
 
     nav a {
       font-weight: 500;
       color: var(--text-color);
       position: relative;
+      font-size: 0.95rem;
     }
 
     nav a::after {
@@ -137,7 +138,7 @@
 
     /* Dirección en el Header */
     .header-address {
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: var(--text-color);
       display: flex;
       align-items: center;
@@ -150,9 +151,9 @@
     }
 
     .header-address i {
-      margin-right: 8px;
+      margin-right: 6px;
       color: var(--primary-color);
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     header.scrolled .header-address a {
@@ -191,50 +192,51 @@
     }
 
     .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
+      font-size: 3rem;
+      margin-bottom: 15px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      line-height: 1.2;
     }
 
     .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
       font-weight: 400;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
 
     .hero p.price {
-      font-size: 2.2rem;
-      margin-bottom: 40px;
+      font-size: 2rem;
+      margin-bottom: 30px;
       font-weight: bold;
       color: var(--secondary-color);
     }
 
-    /* Sticker de Créditos Aceptados Animado */
+    /* Sticker de Créditos Aceptados Ajustado */
     .credit-sticker {
       position: fixed;
       bottom: 100px;
-      right: -50px;
+      right: -30px;
       background-color: rgba(255, 215, 0, 0.9);
       color: #333;
-      padding: 10px 20px;
+      padding: 8px 16px;
       border-radius: 15px;
       box-shadow: 0 4px 8px var(--shadow-color-darker);
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 1rem;
+      gap: 6px;
+      font-size: 0.85rem;
       z-index: 1002;
-      transform: rotate(-45deg);
+      transform: rotate(-30deg);
       animation: floatSticker 5s ease-in-out infinite;
     }
 
     @keyframes floatSticker {
       0%, 100% {
-        transform: rotate(-45deg) translateY(0);
+        transform: rotate(-30deg) translateY(0);
       }
       50% {
-        transform: rotate(-45deg) translateY(-10px);
+        transform: rotate(-30deg) translateY(-8px);
       }
     }
 
@@ -247,15 +249,15 @@
       background: linear-gradient(45deg, #ff7e5f, #feb47b);
       color: var(--accent-color);
       border: none;
-      padding: 15px 30px;
-      font-size: 1.2rem;
+      padding: 12px 25px;
+      font-size: 1rem;
       font-weight: bold;
       border-radius: 50px;
       cursor: pointer;
       transition: transform var(--transition-speed), box-shadow var(--transition-speed), background 0.3s ease;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       box-shadow: 0 4px 12px var(--shadow-color);
       text-decoration: none;
       position: relative;
@@ -263,7 +265,7 @@
     }
 
     .cta-button:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
       box-shadow: 0 8px 20px var(--shadow-color-darker);
       background: linear-gradient(45deg, #feb47b, #ff7e5f);
     }
@@ -291,22 +293,22 @@
     }
 
     .cta-button i {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
 
     /* Sección de Características */
     .features {
-      padding: 80px 20px;
+      padding: 60px 20px;
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      gap: 30px;
     }
 
     .feature-item {
       background-color: var(--accent-color);
-      padding: 40px 30px;
+      padding: 30px 25px;
       border-radius: 15px;
       box-shadow: 0 6px 18px var(--shadow-color);
       text-align: center;
@@ -316,50 +318,51 @@
     }
 
     .feature-item:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       box-shadow: 0 12px 24px var(--shadow-color-darker);
     }
 
     .feature-item i {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: var(--primary-color);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .feature-item h3 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       color: var(--primary-color);
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       font-weight: 700;
     }
 
     .feature-item p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #666666;
     }
 
     /* Sección de Galería de Imágenes */
     .image-gallery {
-      padding: 80px 20px;
+      padding: 60px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .image-gallery h2 {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: var(--primary-color);
+      font-size: 2rem;
     }
 
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 15px;
     }
 
     .gallery-grid img {
       width: 100%;
-      height: 250px;
+      height: 220px;
       object-fit: cover;
       border-radius: 10px;
       transition: transform var(--transition-speed), filter var(--transition-speed);
@@ -367,31 +370,31 @@
     }
 
     .gallery-grid img:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
       filter: brightness(90%);
     }
 
     /* Sección de Testimonios */
     .testimonials {
-      padding: 80px 20px;
+      padding: 60px 20px;
       background-color: #f0f0f0;
     }
 
     .testimonials h2 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: var(--primary-color);
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       position: relative;
     }
 
     .testimonials h2::after {
       content: '';
-      width: 60px;
-      height: 4px;
+      width: 50px;
+      height: 3px;
       background-color: var(--secondary-color);
       position: absolute;
-      bottom: -10px;
+      bottom: -8px;
       left: 50%;
       transform: translateX(-50%);
       border-radius: 2px;
@@ -400,14 +403,14 @@
     .testimonials-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      gap: 30px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .testimonial-item {
       background-color: var(--accent-color);
-      padding: 30px;
+      padding: 25px;
       border-radius: 15px;
       box-shadow: 0 6px 18px var(--shadow-color);
       text-align: center;
@@ -415,13 +418,13 @@
     }
 
     .testimonial-item p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #666666;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .testimonial-item h4 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: var(--primary-color);
       font-weight: bold;
     }
@@ -429,7 +432,7 @@
     /* Sección de Llamado a la Acción Mejorada */
     .cta-section {
       text-align: center;
-      padding: 100px 20px;
+      padding: 80px 20px;
       background: linear-gradient(135deg, #ff7e5f, #feb47b);
       color: var(--accent-color);
       position: relative;
@@ -449,25 +452,26 @@
     }
 
     .cta-section h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
       font-weight: bold;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       position: relative;
       z-index: 1;
+      line-height: 1.2;
     }
 
     .cta-section p {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
       position: relative;
       z-index: 1;
     }
 
     .cta-section .price-highlight {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
+      font-size: 2rem;
+      margin-bottom: 25px;
       color: #fff;
       font-weight: bold;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
@@ -489,8 +493,8 @@
       background-color: #25d366;
       color: white;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -500,11 +504,11 @@
     }
 
     .whatsapp-button:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     .whatsapp-button img {
-      width: 30px;
+      width: 25px;
     }
 
     /* Footer */
@@ -512,8 +516,8 @@
       background-color: #333333;
       color: #ffffff;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
+      padding: 20px 15px;
+      font-size: 0.85rem;
     }
 
     footer p {
@@ -523,7 +527,7 @@
     /* Media Queries para Responsividad */
     @media(max-width: 768px) {
       header {
-        padding: 15px 20px;
+        padding: 10px 15px;
       }
 
       nav {
@@ -532,8 +536,8 @@
         background-color: var(--accent-color);
         position: absolute;
         top: 60px;
-        right: 20px;
-        width: 200px;
+        right: 15px;
+        width: 180px;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 8px var(--shadow-color-darker);
@@ -544,7 +548,7 @@
       }
 
       nav a {
-        padding: 15px;
+        padding: 12px;
         color: var(--primary-color);
         border-bottom: 1px solid rgba(0,0,0,0.1);
       }
@@ -558,19 +562,19 @@
       }
 
       .hero {
-        padding-top: 100px;
+        padding-top: 80px;
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       .hero h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
 
       .hero p.price {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
 
       .features, .testimonials-container, .gallery-grid {
@@ -578,14 +582,32 @@
       }
 
       .credit-sticker {
-        bottom: 100px;
-        right: -40px;
-        font-size: 0.8rem;
-        padding: 8px 12px;
+        bottom: 80px;
+        right: -25px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        transform: rotate(-30deg);
       }
 
       .cta-section h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+      }
+
+      .cta-section p {
+        font-size: 1rem;
+      }
+
+      .cta-section .price-highlight {
+        font-size: 1.7rem;
+      }
+
+      .whatsapp-button {
+        width: 45px;
+        height: 45px;
+      }
+
+      .whatsapp-button img {
+        width: 22px;
       }
     }
   </style>
@@ -615,7 +637,7 @@
     </div>
   </header>
 
-  <!-- Sticker de Créditos Aceptados Animado -->
+  <!-- Sticker de Créditos Aceptados Ajustado -->
   <div class="credit-sticker">
     <i class="fas fa-check-circle"></i>
     <span>Aceptamos: Infonavit, FOVISSSTE y bancarios</span>
