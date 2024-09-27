@@ -4,15 +4,15 @@
   <!-- Meta etiquetas esenciales -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nísperos Condominio | Tu Nuevo Hogar en Querétaro</title>
-  <meta name="description" content="Descubre tu nuevo hogar en Nísperos Condominio. Dúplex con roof garden, amplios espacios y amenidades exclusivas. ¡Agenda tu visita hoy mismo!">
-  <meta name="keywords" content="dúplex, Querétaro, roof garden, Nísperos Condominio, casas en venta, nuevo hogar">
+  <title>Dúplex Arándano | Tu Nuevo Hogar en Nísperos Condominio</title>
+  <meta name="description" content="Conoce el Dúplex Arándano en Nísperos Condominio. Espacios modernos, comodidad y seguridad. ¡Descubre tu nuevo hogar hoy mismo!">
+  <meta name="keywords" content="dúplex en Querétaro, Nísperos Condominio, casas en venta, roof garden, seguridad 24/7">
   <meta name="author" content="Nísperos Condominio">
 
   <!-- Meta etiquetas para redes sociales -->
-  <meta property="og:title" content="Nísperos Condominio | Tu Nuevo Hogar en Querétaro">
-  <meta property="og:description" content="Descubre tu nuevo hogar en Nísperos Condominio. Dúplex con roof garden, amplios espacios y amenidades exclusivas. ¡Agenda tu visita hoy mismo!">
-  <meta property="og:image" content="IMG_0049_edited.webp">
+  <meta property="og:title" content="Dúplex Arándano | Tu Nuevo Hogar en Nísperos Condominio">
+  <meta property="og:description" content="Conoce el Dúplex Arándano en Nísperos Condominio. Espacios modernos, comodidad y seguridad. ¡Descubre tu nuevo hogar hoy mismo!">
+  <meta property="og:image" content="https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.jpeg">
   <meta property="og:url" content="https://abundacreativo.github.io/DuplexArandano/">
   <meta property="og:type" content="website">
 
@@ -20,7 +20,7 @@
   <link rel="icon" href="logonisperos.png" type="image/png">
 
   <!-- Importación de Google Fonts y FontAwesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <!-- AOS CSS para animaciones -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -29,12 +29,12 @@
   <style>
     /* Variables de color y tipografía */
     :root {
-      --primary-color: #2E8B57;
-      --secondary-color: #FFD700;
+      --primary-color: #1B4F72;
+      --secondary-color: #F39C12;
       --accent-color: #FFFFFF;
       --text-color: #333333;
       --background-color: #f5f5f5;
-      --font-family: 'Montserrat', sans-serif;
+      --font-family: 'Poppins', sans-serif;
       --transition-speed: 0.3s;
       --shadow-color: rgba(0, 0, 0, 0.1);
       --shadow-color-darker: rgba(0, 0, 0, 0.2);
@@ -67,7 +67,7 @@
       width: 100%;
       background-color: var(--accent-color);
       box-shadow: 0 2px 4px var(--shadow-color);
-      padding: 10px 20px;
+      padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -75,20 +75,21 @@
     }
 
     header .logo {
-      width: 130px;
-      transition: width 0.3s ease, box-shadow 0.3s ease;
+      width: 150px;
+      transition: width 0.3s ease;
     }
 
+    /* Navegación */
     nav {
       display: flex;
-      gap: 15px;
+      gap: 20px;
     }
 
     nav a {
-      font-weight: 500;
+      font-weight: 600;
       color: var(--text-color);
       position: relative;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
     nav a::after {
@@ -111,6 +112,14 @@
       color: var(--primary-color);
     }
 
+    /* Menú Responsivo */
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
     /* Sección Hero */
     .hero {
       background-image: url('IMG_0049_edited.webp');
@@ -118,238 +127,264 @@
       background-position: center;
       height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
       position: relative;
       color: var(--accent-color);
-      text-align: center;
       padding: 80px 20px;
-      box-sizing: border-box;
     }
 
     .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.6);
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
+      left: 0;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 800px;
+      max-width: 600px;
+      margin-left: 50px;
     }
 
     .hero h1 {
       font-size: 3.5rem;
       margin-bottom: 20px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       line-height: 1.2;
     }
 
-    .hero h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      font-weight: 400;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .hero p.price {
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-      font-weight: bold;
-      color: var(--secondary-color);
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
     }
 
     .hero .cta-button {
+      background-color: var(--secondary-color);
+      color: var(--accent-color);
+      padding: 15px 30px;
+      border-radius: 50px;
       font-size: 1.2rem;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color var(--transition-speed);
     }
 
-    /* Sección de Beneficios */
-    .benefits {
-      padding: 60px 20px;
+    .hero .cta-button:hover {
+      background-color: #D68910;
+    }
+
+    /* Sección Sobre Nosotros */
+    .about-section {
+      display: flex;
+      align-items: center;
+      padding: 80px 20px;
       max-width: 1200px;
       margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 30px;
+      gap: 40px;
     }
 
-    .benefit-item {
-      flex: 1 1 calc(33% - 60px);
-      background-color: var(--accent-color);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 6px 18px var(--shadow-color);
-      text-align: center;
-      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-      position: relative;
-      overflow: hidden;
-      min-width: 280px;
+    .about-text {
+      flex: 1;
     }
 
-    .benefit-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px var(--shadow-color-darker);
-    }
-
-    .benefit-item i {
+    .about-text h2 {
       font-size: 2.5rem;
       color: var(--primary-color);
       margin-bottom: 20px;
     }
 
-    .benefit-item h3 {
+    .about-text p {
+      font-size: 1.1rem;
+      color: #555555;
+      margin-bottom: 20px;
+    }
+
+    .about-text .cta-button {
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: bold;
+      display: inline-block;
+      transition: background-color var(--transition-speed);
+    }
+
+    .about-text .cta-button:hover {
+      background-color: #154360;
+    }
+
+    .about-image {
+      flex: 1;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px var(--shadow-color);
+    }
+
+    /* Sección Características */
+    .features-section {
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .features-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 60px;
+    }
+
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .feature-card {
+      background-color: var(--accent-color);
+      padding: 30px;
+      border-radius: 15px;
+      width: calc(33% - 40px);
+      box-shadow: 0 6px 18px var(--shadow-color);
+      text-align: center;
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px var(--shadow-color-darker);
+    }
+
+    .feature-card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
       font-size: 1.5rem;
       color: var(--primary-color);
-      margin-bottom: 12px;
-      font-weight: 700;
+      margin-bottom: 15px;
     }
 
-    .benefit-item p {
+    .feature-card p {
       font-size: 1rem;
-      color: #666666;
+      color: #555555;
     }
 
-    /* Sección de Galería */
-    .gallery {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+    /* Sección Galería */
+    .gallery-section {
+      padding: 80px 20px;
     }
 
-    .gallery h2 {
+    .gallery-section h2 {
       text-align: center;
-      margin-bottom: 30px;
+      font-size: 2.5rem;
       color: var(--primary-color);
-      font-size: 2rem;
+      margin-bottom: 60px;
     }
 
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .gallery-grid img {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-      transition: transform var(--transition-speed), filter var(--transition-speed);
-      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px var(--shadow-color);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     }
 
     .gallery-grid img:hover {
-      transform: scale(1.03);
-      filter: brightness(90%);
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px var(--shadow-color-darker);
     }
 
-    /* Sección de Testimonios */
-    .testimonials {
-      padding: 60px 20px;
-      background-color: #f0f0f0;
-    }
-
-    .testimonials h2 {
+    /* Sección Testimonios */
+    .testimonials-section {
+      padding: 80px 20px;
+      background-color: var(--primary-color);
+      color: var(--accent-color);
       text-align: center;
-      font-size: 2rem;
-      color: var(--primary-color);
-      margin-bottom: 40px;
-      position: relative;
     }
 
-    .testimonials h2::after {
-      content: '';
-      width: 50px;
-      height: 3px;
-      background-color: var(--secondary-color);
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 2px;
+    .testimonials-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 60px;
     }
 
     .testimonials-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
+      gap: 40px;
     }
 
-    .testimonial-item {
-      flex: 1 1 calc(50% - 60px);
-      background-color: var(--accent-color);
-      padding: 25px;
+    .testimonial-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
       border-radius: 15px;
+      width: calc(33% - 40px);
       box-shadow: 0 6px 18px var(--shadow-color);
-      text-align: center;
-      position: relative;
-      min-width: 280px;
     }
 
-    .testimonial-item p {
+    .testimonial-card p {
       font-size: 1rem;
-      color: #666666;
       margin-bottom: 15px;
     }
 
-    .testimonial-item h4 {
-      font-size: 1.1rem;
-      color: var(--primary-color);
+    .testimonial-card h4 {
+      font-size: 1.2rem;
       font-weight: bold;
     }
 
-    /* Sección de Contacto */
-    .contact-section {
-      padding: 60px 20px;
-      background-color: var(--accent-color);
+    /* Sección CTA Final */
+    .final-cta-section {
+      padding: 80px 20px;
+      background-image: url('pattern.svg');
+      background-size: cover;
+      background-position: center;
+      color: var(--accent-color);
+      text-align: center;
     }
 
-    .contact-section h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      color: var(--primary-color);
+    .final-cta-section h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .final-cta-section p {
+      font-size: 1.5rem;
       margin-bottom: 40px;
     }
 
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contact-form form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .contact-form input, .contact-form textarea {
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 1rem;
-    }
-
-    .contact-form button {
-      padding: 15px;
-      background-color: var(--primary-color);
+    .final-cta-section .cta-button {
+      background-color: var(--secondary-color);
       color: var(--accent-color);
-      border: none;
-      border-radius: 10px;
+      padding: 15px 30px;
+      border-radius: 50px;
       font-size: 1.2rem;
-      cursor: pointer;
-      transition: background var(--transition-speed);
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color var(--transition-speed);
     }
 
-    .contact-form button:hover {
-      background-color: #24694b;
+    .final-cta-section .cta-button:hover {
+      background-color: #D68910;
     }
 
     /* Footer */
@@ -357,30 +392,45 @@
       background-color: #333333;
       color: #ffffff;
       text-align: center;
-      padding: 20px 15px;
-      font-size: 0.85rem;
+      padding: 30px 20px;
+      font-size: 0.9rem;
     }
 
-    footer p {
-      margin: 0;
-    }
-
-    /* Media Queries para Responsividad */
-    @media(max-width: 768px) {
-      header {
-        padding: 10px 15px;
+    /* Media Queries */
+    @media(max-width: 1024px) {
+      .about-section {
+        flex-direction: column;
+        align-items: center;
       }
 
+      .about-text, .about-image {
+        width: 100%;
+        text-align: center;
+      }
+
+      .about-text {
+        margin-bottom: 40px;
+      }
+
+      .feature-card {
+        width: calc(50% - 40px);
+      }
+
+      .testimonial-card {
+        width: calc(50% - 40px);
+      }
+    }
+
+    @media(max-width: 768px) {
       nav {
         display: none;
         flex-direction: column;
         background-color: var(--accent-color);
         position: absolute;
         top: 60px;
-        right: 15px;
-        width: 180px;
+        right: 20px;
+        width: 200px;
         border-radius: 10px;
-        overflow: hidden;
         box-shadow: 0 4px 8px var(--shadow-color-darker);
       }
 
@@ -389,36 +439,35 @@
       }
 
       nav a {
-        padding: 12px;
+        padding: 15px;
         color: var(--primary-color);
         border-bottom: 1px solid rgba(0,0,0,0.1);
       }
 
       .hamburger {
         display: block;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--text-color);
       }
 
       .hero {
-        padding-top: 80px;
+        height: 100vh;
+        padding: 60px 20px;
+      }
+
+      .hero-content {
+        margin-left: 0;
+        text-align: center;
       }
 
       .hero h1 {
         font-size: 2.5rem;
       }
 
-      .hero h2 {
-        font-size: 1.5rem;
+      .hero p {
+        font-size: 1.2rem;
       }
 
-      .hero p.price {
-        font-size: 1.5rem;
-      }
-
-      .benefit-item, .testimonial-item {
-        flex: 1 1 100%;
+      .feature-card, .testimonial-card {
+        width: 100%;
       }
     }
   </style>
@@ -429,8 +478,9 @@
   <header>
     <img src="logonisperos.png" alt="Nísperos Condominio Logo" class="logo">
     <nav id="nav-menu">
-      <a href="#hero">Inicio</a>
-      <a href="#benefits">Beneficios</a>
+      <a href="#home">Inicio</a>
+      <a href="#about">Sobre Nosotros</a>
+      <a href="#features">Características</a>
       <a href="#gallery">Galería</a>
       <a href="#testimonials">Testimonios</a>
       <a href="#contact">Contacto</a>
@@ -441,75 +491,88 @@
   </header>
 
   <!-- Sección Hero -->
-  <section class="hero" id="hero">
-    <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="hero-content" data-aos="fade-up">
-      <h1>Tu Nuevo Hogar Te Espera en Querétaro</h1>
-      <h2>Dúplex con Roof Garden y Amenidades Exclusivas</h2>
-      <p class="price">Desde $1,360,000 MXN</p>
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-right">
+      <h1>Dúplex Arándano</h1>
+      <p>Vive la experiencia de un hogar moderno y seguro en Querétaro.</p>
       <a href="#contact" class="cta-button">
-        <i class="fas fa-envelope"></i> <span>Agenda tu Visita</span>
+        <i class="fas fa-home"></i> Conoce Más
       </a>
     </div>
   </section>
 
-  <!-- Sección de Beneficios -->
-  <section class="benefits" id="benefits">
-    <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
-      <i class="fas fa-map-marker-alt"></i>
-      <h3>Ubicación Estratégica</h3>
-      <p>Cerca de escuelas, centros comerciales y vías principales.</p>
+  <!-- Sección Sobre Nosotros -->
+  <section class="about-section" id="about">
+    <div class="about-text" data-aos="fade-up">
+      <h2>Bienvenido a Nísperos Condominio</h2>
+      <p>En Nísperos Condominio, ofrecemos viviendas de alta calidad diseñadas para mejorar tu calidad de vida. Descubre espacios modernos, cómodos y seguros para ti y tu familia.</p>
+      <a href="#contact" class="cta-button">Agenda una Visita</a>
     </div>
-    <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
-      <i class="fas fa-shield-alt"></i>
-      <h3>Seguridad 24/7</h3>
-      <p>Acceso controlado y vigilancia para tu tranquilidad.</p>
-    </div>
-    <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
-      <i class="fas fa-leaf"></i>
-      <h3>Áreas Verdes</h3>
-      <p>Espacios al aire libre para disfrutar en familia.</p>
+    <div class="about-image" data-aos="fade-left">
+      <img src="IMG_0088.webp" alt="Dúplex Arándano">
     </div>
   </section>
 
-  <!-- Sección de Galería -->
-  <section class="gallery" id="gallery">
-    <h2 data-aos="fade-up">Descubre Tu Nuevo Hogar</h2>
+  <!-- Sección Características -->
+  <section class="features-section" id="features">
+    <h2 data-aos="fade-up">Características Destacadas</h2>
+    <div class="features-container">
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-expand-arrows-alt"></i>
+        <h3>Espacios Amplios</h3>
+        <p>Disfruta de áreas diseñadas para tu comodidad y funcionalidad.</p>
+      </div>
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-tree"></i>
+        <h3>Áreas Verdes</h3>
+        <p>Conecta con la naturaleza en nuestros espacios al aire libre.</p>
+      </div>
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Seguridad 24/7</h3>
+        <p>Vive con tranquilidad en un entorno seguro para tu familia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Galería -->
+  <section class="gallery-section" id="gallery">
+    <h2 data-aos="fade-up">Galería de Imágenes</h2>
     <div class="gallery-grid">
-      <img src="IMG_0088.webp" alt="Interior dúplex en Querétaro" data-aos="zoom-in" loading="lazy">
-      <img src="IMG_0052.webp" alt="Sala de estar dúplex en Querétaro" data-aos="zoom-in" data-aos-delay="100" loading="lazy">
-      <img src="IMG_0017.webp" alt="Cocina moderna en dúplex Querétaro" data-aos="zoom-in" data-aos-delay="200" loading="lazy">
-      <!-- Añade más imágenes según sea necesario -->
+      <img src="IMG_0052.webp" alt="Sala de estar" data-aos="fade-up" loading="lazy">
+      <img src="IMG_0017.webp" alt="Cocina moderna" data-aos="fade-up" data-aos-delay="100" loading="lazy">
+      <img src="IMG_0088.webp" alt="Recámara principal" data-aos="fade-up" data-aos-delay="200" loading="lazy">
+      <!-- Añade más imágenes si es necesario -->
     </div>
   </section>
 
-  <!-- Sección de Testimonios -->
-  <section class="testimonials" id="testimonials">
-    <h2 data-aos="fade-up">Nuestros Residentes Opinan</h2>
+  <!-- Sección Testimonios -->
+  <section class="testimonials-section" id="testimonials">
+    <h2 data-aos="fade-up">Lo Que Dicen Nuestros Clientes</h2>
     <div class="testimonials-container">
-      <div class="testimonial-item" data-aos="fade-right">
-        <p>"Nísperos Condominio superó nuestras expectativas. La comunidad es maravillosa y el entorno es perfecto para nuestra familia."</p>
-        <h4>- María y Carlos</h4>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <p>"Nísperos Condominio superó nuestras expectativas. Un lugar perfecto para nuestra familia."</p>
+        <h4>- María y José</h4>
       </div>
-      <div class="testimonial-item" data-aos="fade-left" data-aos-delay="100">
-        <p>"La ubicación es inmejorable. Tenemos todo lo que necesitamos a pocos minutos de casa."</p>
-        <h4>- Andrea López</h4>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <p>"La seguridad y la tranquilidad que ofrece este lugar es incomparable. Estamos muy felices aquí."</p>
+        <h4>- Luis Fernández</h4>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+        <p>"Un hogar moderno y cómodo. ¡Recomendado al 100%!"</p>
+        <h4>- Ana González</h4>
       </div>
     </div>
   </section>
 
-  <!-- Sección de Contacto -->
-  <section class="contact-section" id="contact">
-    <h2 data-aos="fade-up">¡Agenda Tu Visita Hoy Mismo!</h2>
-    <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
-      <form action="#" method="POST">
-        <input type="text" name="name" placeholder="Nombre Completo" required>
-        <input type="email" name="email" placeholder="Correo Electrónico" required>
-        <input type="tel" name="phone" placeholder="Teléfono" required>
-        <textarea name="message" rows="4" placeholder="Mensaje (Opcional)"></textarea>
-        <button type="submit">Enviar Mensaje</button>
-      </form>
-    </div>
+  <!-- Sección CTA Final -->
+  <section class="final-cta-section" id="contact">
+    <h2 data-aos="fade-up">¡Haz Realidad Tu Sueño!</h2>
+    <p data-aos="fade-up" data-aos-delay="100">Contáctanos hoy mismo y descubre todo lo que Dúplex Arándano tiene para ofrecerte.</p>
+    <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button" data-aos="fade-up" data-aos-delay="200">
+      <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+    </a>
   </section>
 
   <!-- Footer -->
