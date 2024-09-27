@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dúplex Arándano | Tu Nuevo Hogar en Nísperos Condominio</title>
-  <meta name="description" content="Conoce el Dúplex Arándano en Nísperos Condominio. Espacios modernos, comodidad y seguridad. ¡Descubre tu nuevo hogar hoy mismo!">
-  <meta name="keywords" content="dúplex en Querétaro, Nísperos Condominio, casas en venta, roof garden, seguridad 24/7">
+  <meta name="description" content="Descubre el Dúplex Arándano en Nísperos Condominio. Vive en un hogar moderno, seguro y cómodo en Querétaro. ¡Contáctanos para más información!">
+  <meta name="keywords" content="dúplex, Querétaro, Nísperos Condominio, casas en venta, seguridad, inversión inmobiliaria">
   <meta name="author" content="Nísperos Condominio">
 
   <!-- Meta etiquetas para redes sociales -->
   <meta property="og:title" content="Dúplex Arándano | Tu Nuevo Hogar en Nísperos Condominio">
-  <meta property="og:description" content="Conoce el Dúplex Arándano en Nísperos Condominio. Espacios modernos, comodidad y seguridad. ¡Descubre tu nuevo hogar hoy mismo!">
-  <meta property="og:image" content="https://abundacreativo.github.io/DuplexArandano/IMG_0049_edited.jpeg">
-  <meta property="og:url" content="https://abundacreativo.github.io/DuplexArandano/">
+  <meta property="og:description" content="Vive en un hogar moderno y seguro. Descubre el Dúplex Arándano en Nísperos Condominio, Querétaro.">
+  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:url" content="https://tusitio.com/">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" href="logonisperos.png" type="image/png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
 
   <!-- Importación de Google Fonts y FontAwesome -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -113,6 +113,11 @@
       color: var(--primary-color);
     }
 
+    /* Indicador de sección activa */
+    nav a.active::after {
+      width: 100%;
+    }
+
     /* Menú Responsivo */
     .hamburger {
       display: none;
@@ -123,7 +128,7 @@
 
     /* Sección Hero */
     .hero {
-      background-image: url('IMG_0049_edited.webp');
+      background-image: url('img/hero-bg.webp');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -191,17 +196,17 @@
     /* Sticker de Créditos Aceptados */
     .credit-sticker {
       position: fixed;
-      top: 70px;
-      left: -60px; /* Ajustar para sacar una parte fuera de la pantalla */
+      top: 250px;
+      right: -50px;
       background-color: var(--secondary-color);
       color: var(--accent-color);
       padding: 10px 20px;
-      border-radius: 0 8px 8px 0;
+      border-radius: 8px 0 0 8px;
       box-shadow: 0 4px 8px var(--shadow-color-darker);
       font-size: 0.9rem;
       z-index: 1001;
-      transform: rotate(-90deg); /* Rotar el sticker */
-      transform-origin: top left;
+      transform: rotate(90deg);
+      transform-origin: top right;
     }
 
     .credit-sticker i {
@@ -259,54 +264,48 @@
       box-shadow: 0 6px 18px var(--shadow-color);
     }
 
-    /* Sección Características */
-    .features-section {
+    /* Nueva Sección de Beneficios */
+    .benefits-section {
       padding: 80px 20px;
-      background-color: #f9f9f9;
+      background-color: #fff;
     }
 
-    .features-section h2 {
+    .benefits-section h2 {
       text-align: center;
       font-size: 2.4rem;
       color: var(--primary-color);
       margin-bottom: 60px;
     }
 
-    .features-container {
+    .benefits-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
     }
 
-    .feature-card {
+    .benefit-card {
       background-color: var(--accent-color);
       padding: 25px;
       border-radius: 15px;
-      width: calc(25% - 40px);
+      width: calc(33% - 40px);
       box-shadow: 0 6px 18px var(--shadow-color);
       text-align: center;
-      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     }
 
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 24px var(--shadow-color-darker);
-    }
-
-    .feature-card i {
+    .benefit-card i {
       font-size: 2rem;
       color: var(--primary-color);
       margin-bottom: 15px;
     }
 
-    .feature-card h3 {
+    .benefit-card h3 {
       font-size: 1.3rem;
       color: var(--primary-color);
       margin-bottom: 10px;
     }
 
-    .feature-card p {
+    .benefit-card p {
       font-size: 0.95rem;
       color: #555555;
     }
@@ -343,7 +342,7 @@
       box-shadow: 0 12px 24px var(--shadow-color-darker);
     }
 
-    /* Sección Testimonios */
+    /* Sección Testimonios Mejorada */
     .testimonials-section {
       padding: 80px 20px;
       background-color: var(--primary-color);
@@ -353,26 +352,32 @@
 
     .testimonials-section h2 {
       font-size: 2.4rem;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
 
-    .testimonials-container {
+    .testimonials-slider {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .testimonials-slider .slides {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
+      transition: transform 0.5s ease-in-out;
     }
 
     .testimonial-card {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 25px;
       border-radius: 15px;
-      width: calc(33% - 40px);
+      min-width: 100%;
       box-shadow: 0 6px 18px var(--shadow-color);
+      box-sizing: border-box;
     }
 
     .testimonial-card p {
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin-bottom: 15px;
       line-height: 1.5;
     }
@@ -380,6 +385,106 @@
     .testimonial-card h4 {
       font-size: 1.1rem;
       font-weight: bold;
+    }
+
+    /* Controles del Slider */
+    .slider-controls {
+      margin-top: 20px;
+    }
+
+    .slider-controls button {
+      background-color: var(--secondary-color);
+      border: none;
+      color: var(--accent-color);
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color var(--transition-speed);
+    }
+
+    .slider-controls button:hover {
+      background-color: #D68910;
+    }
+
+    /* Sección de Mapa */
+    .location-section {
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .location-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+    }
+
+    .map-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px var(--shadow-color);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    /* Sección FAQ */
+    .faq-section {
+      padding: 80px 20px;
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item h3 {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      cursor: pointer;
+      position: relative;
+      padding-right: 30px;
+    }
+
+    .faq-item h3::after {
+      content: '\f078';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open h3::after {
+      transform: rotate(180deg);
+    }
+
+    .faq-item p {
+      display: none;
+      font-size: 1rem;
+      color: #555555;
+      margin-top: 10px;
+    }
+
+    .faq-item.open p {
+      display: block;
     }
 
     /* Sección CTA Final Mejorada */
@@ -403,6 +508,12 @@
       margin-bottom: 40px;
       color: #FFFFFF;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .final-cta-section .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
 
     .final-cta-section .cta-button {
@@ -447,18 +558,18 @@
         margin-bottom: 40px;
       }
 
-      .feature-card {
+      .benefit-card {
         width: calc(50% - 40px);
       }
 
       .testimonial-card {
-        width: calc(50% - 40px);
+        width: calc(100% - 40px);
       }
 
       /* Ajuste del sticker en pantallas medianas */
       .credit-sticker {
-        top: 80px;
-        left: -50px;
+        top: 220px;
+        right: -40px;
         font-size: 0.8rem;
       }
     }
@@ -512,13 +623,13 @@
         font-size: 1.2rem;
       }
 
-      .feature-card, .testimonial-card {
+      .benefit-card {
         width: 100%;
       }
 
-      /* Ajuste del sticker en dispositivos móviles */
+      /* Ocultar el sticker en dispositivos móviles */
       .credit-sticker {
-        display: none; /* Ocultar el sticker en móviles para mejorar la estética */
+        display: none;
       }
     }
   </style>
@@ -528,14 +639,15 @@
   <!-- Header -->
   <header>
     <a href="#home">
-      <img src="logonisperos.png" alt="Nísperos Condominio Logo" class="logo">
+      <img src="img/logonisperos.png" alt="Nísperos Condominio Logo" class="logo">
     </a>
     <nav id="nav-menu">
-      <a href="#home">Inicio</a>
+      <a href="#home" class="active">Inicio</a>
       <a href="#about">Sobre Nosotros</a>
-      <a href="#features">Características</a>
+      <a href="#benefits">Beneficios</a>
       <a href="#gallery">Galería</a>
       <a href="#testimonials">Testimonios</a>
+      <a href="#location">Ubicación</a>
       <a href="#contact">Contacto</a>
     </nav>
     <div class="hamburger" id="hamburger">
@@ -557,7 +669,7 @@
       <p>Vive la experiencia de un hogar moderno y seguro en Querétaro.</p>
       <p class="price">Desde $1.36M</p>
       <a href="#about" class="cta-button">
-        <i class="fas fa-home"></i> Conoce Más
+        <i class="fas fa-info-circle"></i> Conoce Más
       </a>
     </div>
   </section>
@@ -570,34 +682,28 @@
       <a href="#contact" class="cta-button">Agenda una Visita</a>
     </div>
     <div class="about-image" data-aos="fade-left">
-      <img src="IMG_0088.webp" alt="Dúplex Arándano">
+      <img src="img/IMG_0088.webp" alt="Dúplex Arándano">
     </div>
   </section>
 
-  <!-- Sección Características -->
-  <section class="features-section" id="features">
-    <h2 data-aos="fade-up">Características Destacadas</h2>
-    <div class="features-container">
-      <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
-        <i class="fas fa-expand-arrows-alt"></i>
-        <h3>Espacios Amplios</h3>
-        <p>Disfruta de áreas diseñadas para tu comodidad y funcionalidad.</p>
+  <!-- Sección Beneficios -->
+  <section class="benefits-section" id="benefits">
+    <h2 data-aos="fade-up">Beneficios de Vivir Aquí</h2>
+    <div class="benefits-container">
+      <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-swimming-pool"></i>
+        <h3>Áreas Recreativas</h3>
+        <p>Disfruta de piscina, parque infantil y más amenidades para toda la familia.</p>
       </div>
-      <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
-        <i class="fas fa-tree"></i>
-        <h3>Áreas Verdes</h3>
-        <p>Conecta con la naturaleza en nuestros espacios al aire libre.</p>
+      <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-school"></i>
+        <h3>Cercanía a Escuelas</h3>
+        <p>Acceso a las mejores instituciones educativas de la zona.</p>
       </div>
-      <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
-        <i class="fas fa-shield-alt"></i>
-        <h3>Seguridad 24/7</h3>
-        <p>Vive con tranquilidad en un entorno seguro para tu familia.</p>
-      </div>
-      <!-- Nueva Tarjeta de "Excelente Ubicación" -->
-      <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
-        <i class="fas fa-map-marker-alt"></i>
-        <h3>Excelente Ubicación</h3>
-        <p>Fraccionamiento Los Huertos, Querétaro. Accesibilidad y conveniencia en un solo lugar.</p>
+      <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>Centros Comerciales</h3>
+        <p>A minutos de plazas y tiendas para tu comodidad.</p>
       </div>
     </div>
   </section>
@@ -606,29 +712,59 @@
   <section class="gallery-section" id="gallery">
     <h2 data-aos="fade-up">Galería de Imágenes</h2>
     <div class="gallery-grid">
-      <img src="IMG_0052.webp" alt="Sala de estar" data-aos="fade-up" loading="lazy">
-      <img src="IMG_0017.webp" alt="Cocina moderna" data-aos="fade-up" data-aos-delay="100" loading="lazy">
-      <img src="IMG_0088.webp" alt="Recámara principal" data-aos="fade-up" data-aos-delay="200" loading="lazy">
+      <img src="img/IMG_0052.webp" alt="Sala de estar" data-aos="fade-up" loading="lazy">
+      <img src="img/IMG_0017.webp" alt="Cocina moderna" data-aos="fade-up" data-aos-delay="100" loading="lazy">
+      <img src="img/IMG_0088.webp" alt="Recámara principal" data-aos="fade-up" data-aos-delay="200" loading="lazy">
       <!-- Añade más imágenes si es necesario -->
     </div>
   </section>
 
-  <!-- Sección Testimonios -->
+  <!-- Sección Testimonios Mejorada -->
   <section class="testimonials-section" id="testimonials">
     <h2 data-aos="fade-up">Lo Que Dicen Nuestros Clientes</h2>
-    <div class="testimonials-container">
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-        <p>"Nísperos Condominio superó nuestras expectativas. Un lugar perfecto para nuestra familia."</p>
-        <h4>- María y José</h4>
+    <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="100">
+      <div class="slides">
+        <div class="testimonial-card">
+          <p>"Nísperos Condominio superó nuestras expectativas. Un lugar perfecto para nuestra familia."</p>
+          <h4>- María y José</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>"La seguridad y la tranquilidad que ofrece este lugar es incomparable. Estamos muy felices aquí."</p>
+          <h4>- Luis Fernández</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>"Un hogar moderno y cómodo. ¡Recomendado al 100%!"</p>
+          <h4>- Ana González</h4>
+        </div>
       </div>
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-        <p>"La seguridad y la tranquilidad que ofrece este lugar es incomparable. Estamos muy felices aquí."</p>
-        <h4>- Luis Fernández</h4>
+    </div>
+    <div class="slider-controls">
+      <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+      <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Sección de Mapa -->
+  <section class="location-section" id="location">
+    <h2 data-aos="fade-up">Ubicación Estratégica</h2>
+    <div class="map-container" data-aos="fade-up" data-aos-delay="100">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18... (tu enlace de Google Maps)" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Sección FAQ -->
+  <section class="faq-section" id="faq">
+    <h2 data-aos="fade-up">Preguntas Frecuentes</h2>
+    <div class="faq-container">
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+        <h3>¿Qué tipos de crédito aceptan?</h3>
+        <p>Aceptamos créditos Infonavit, FOVISSSTE y bancarios.</p>
       </div>
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-        <p>"Un hogar moderno y cómodo. ¡Recomendado al 100%!"</p>
-        <h4>- Ana González</h4>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+        <h3>¿La seguridad es 24/7?</h3>
+        <p>Sí, contamos con vigilancia y control de acceso las 24 horas.</p>
       </div>
+      <!-- Añade más preguntas si es necesario -->
     </div>
   </section>
 
@@ -636,9 +772,14 @@
   <section class="final-cta-section" id="contact">
     <h2 data-aos="fade-up">¡Haz Realidad Tu Sueño!</h2>
     <p data-aos="fade-up" data-aos-delay="100">Contáctanos hoy mismo y descubre todo lo que Dúplex Arándano tiene para ofrecerte.</p>
-    <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button" data-aos="fade-up" data-aos-delay="200">
-      <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
-    </a>
+    <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+      <a href="tel:+524422501632" class="cta-button">
+        <i class="fas fa-phone"></i> Llámanos
+      </a>
+      <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -667,6 +808,61 @@
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     };
+
+    // Slider de Testimonios
+    const slides = document.querySelector('.testimonials-slider .slides');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < slides.children.length - 1) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
+
+    function updateSlider() {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // FAQ Interactivo
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      item.querySelector('h3').addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+
+    // Actualizar indicador de sección activa en el menú
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
   </script>
 </body>
 </html>
