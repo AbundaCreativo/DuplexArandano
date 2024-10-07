@@ -213,7 +213,7 @@
       margin-right: 8px;
     }
 
-    /* Sección Sobre Nosotros (Oculta del menú) */
+    /* Sección Sobre Nosotros */
     .about-section {
       display: flex;
       align-items: center;
@@ -311,12 +311,24 @@
       margin-bottom: 10px;
     }
 
-    .benefit-card p {
+    .benefit-card p,
+    .benefit-card ul {
       font-size: 0.95rem;
       color: #555555;
     }
 
-    /* Sección Galería (Oculta del menú) */
+    /* Estilos para eliminar los puntos de los bullet points */
+    .benefit-card ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .benefit-card ul li {
+      margin-bottom: 5px;
+    }
+
+    /* Sección Galería */
     .gallery-section {
       padding: 80px 20px;
     }
@@ -348,7 +360,7 @@
       box-shadow: 0 12px 24px var(--shadow-color-darker);
     }
 
-    /* Sección Testimonios (Oculta del menú) */
+    /* Sección Testimonios */
     .testimonials-section {
       padding: 80px 20px;
       background-color: var(--primary-color);
@@ -493,7 +505,7 @@
       display: block;
     }
 
-    /* Sección CTA Final Mejorada */
+    /* Sección CTA Final */
     .final-cta-section {
       position: relative;
       padding: 80px 20px;
@@ -744,22 +756,21 @@
         <h3>Roof Top</h3>
         <p>Disfruta de un espacio al aire libre en la azotea para reuniones y descanso.</p>
       </div>
+      <!-- Tarjeta "Seguridad 24/7" -->
       <div class="benefit-card" data-aos="zoom-in" data-aos-delay="300">
         <i class="fas fa-shield-alt"></i>
         <h3>Seguridad 24/7</h3>
         <p>Vive con tranquilidad en un entorno seguro para tu familia.</p>
       </div>
       <!-- Tarjeta "Excelente Ubicación" Actualizada -->
-      <a href="#location">
-        <div class="benefit-card" data-aos="zoom-in" data-aos-delay="400">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Excelente Ubicación</h3>
-          <p>
-            <strong>Fraccionamiento Los Huertos</strong><br>
-            Av. Paseo de las Moras<br>
-            San José el Alto, Querétaro
-          </p>
-        </div>
+      <a href="#location" class="benefit-card" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Excelente Ubicación</h3>
+        <p>
+          <strong>Fraccionamiento Los Huertos</strong><br>
+          Av. Paseo de las Moras<br>
+          San José el Alto, Querétaro
+        </p>
       </a>
     </div>
   </section>
@@ -804,7 +815,7 @@
   <section class="location-section" id="location">
     <h2 data-aos="fade-up">Ubicación Estratégica</h2>
     <div class="map-container" data-aos="fade-up" data-aos-delay="100">
-      <!-- Mapa actualizado con la nueva ubicación y pin -->
+      <!-- Mapa actualizado -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.642473280777!2d-100.41652228456193!3d20.64537140607288!2m3!1f0!2f0!3f0!3m2
 !1i1024!2i768!4f13.1!3m3!1m2!1s0x842cbf959b3676c1%3A0x10cc9dce35f3b6cc!2sPaseo%20de%20las%20Cerezas%2C%2076147%20San%20Jos%C3%A9%20el%20Alto%2C%20Qro.!5e0!3m2!1ses!2smx!4v1696612423786!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
     </div>
@@ -838,7 +849,7 @@
     </div>
   </section>
 
-  <!-- Sección CTA Final Mejorada -->
+  <!-- Sección CTA Final -->
   <section class="final-cta-section" id="contact">
     <h2 data-aos="fade-up">¡Haz Realidad Tu Sueño!</h2>
     <p data-aos="fade-up" data-aos-delay="100">Contáctanos hoy mismo y descubre todo lo que Dúplex Arándano tiene para ofrecerte.</p>
