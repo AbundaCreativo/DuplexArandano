@@ -729,7 +729,7 @@
     <div class="about-text" data-aos="fade-up">
       <h2>Bienvenido a Nísperos Condominio</h2>
       <p>En Nísperos Condominio, ofrecemos viviendas de alta calidad diseñadas para mejorar tu calidad de vida. Descubre espacios modernos, cómodos y seguros para ti y tu familia.</p>
-      <a href="#contact" class="cta-button">Agenda una Visita</a>
+      <a href="#contact" class="cta-button smooth-scroll">Agenda una Visita</a>
     </div>
     <div class="about-image" data-aos="fade-left">
       <img src="IMG_0088.webp" alt="Dúplex Arándano">
@@ -879,7 +879,8 @@
     // Inicializar AOS
     AOS.init({
       duration: 1000,
-      once: true
+      once: true,
+      offset: 0 // Ajuste para que los elementos estén en el DOM desde el inicio
     });
 
     // Menú Responsivo
@@ -947,6 +948,23 @@
         if (link.getAttribute('href').includes(current)) {
           link.classList.add('active');
         }
+      });
+    });
+
+    // Corrección del desplazamiento al hacer clic en enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetID = this.getAttribute('href');
+        const targetElement = document.querySelector(targetID);
+
+        // Esperar un pequeño tiempo para asegurar que los elementos estén en el DOM
+        setTimeout(() => {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70, // Ajuste según la altura del header
+            behavior: 'smooth'
+          });
+        }, 100);
       });
     });
   </script>
