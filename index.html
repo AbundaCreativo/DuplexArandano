@@ -333,6 +333,13 @@
       padding: 80px 20px;
     }
 
+    .gallery-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: var(--primary-color);
+      margin-bottom: 60px;
+    }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -545,27 +552,6 @@
       background-color: #154360;
     }
 
-    /* Estilos para los logos de instituciones financieras */
-    .financial-logos {
-      margin-top: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .financial-logos img {
-      max-width: 120px;
-      height: auto;
-      filter: brightness(0) invert(1);
-      transition: filter var(--transition-speed);
-    }
-
-    .financial-logos img:hover {
-      filter: brightness(0.8) invert(0.8);
-    }
-
     /* Botón de WhatsApp flotante */
     .whatsapp-float {
       position: fixed;
@@ -627,10 +613,6 @@
 
       .testimonial-card {
         width: calc(100% - 40px);
-      }
-
-      .financial-logos img {
-        max-width: 100px;
       }
 
       /* Ajuste del sticker en pantallas medianas */
@@ -696,11 +678,6 @@
 
       .final-cta-section .cta-buttons {
         flex-direction: column;
-      }
-
-      .financial-logos {
-        flex-direction: column;
-        gap: 20px;
       }
 
       /* Ocultar el sticker en dispositivos móviles */
@@ -883,18 +860,6 @@
       <a href="https://wa.me/5214422501632?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20Dúplex%20Arándano." class="cta-button">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
-    </div>
-
-    <!-- Logos de instituciones financieras -->
-    <div class="financial-logos" data-aos="fade-up" data-aos-delay="300">
-      <!-- Reemplaza 'logo_infonavit.png', etc., con las rutas correctas a tus imágenes -->
-      <img src="logo_infonavit.png" alt="Infonavit">
-      <img src="logo_fovissste.png" alt="FOVISSSTE">
-      <img src="logo_bbva.png" alt="BBVA">
-      <img src="logo_banorte.png" alt="Banorte">
-      <img src="logo_santander.png" alt="Santander">
-      <img src="logo_hsbc.png" alt="HSBC">
-      <!-- Añade más logos si es necesario -->
     </div>
   </section>
 
